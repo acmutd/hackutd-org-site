@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import styled, { keyframes } from 'styled-components';
 
 import CONSTRAINTS from 'constants/constraints';
@@ -13,7 +15,7 @@ const up_down = keyframes`
   }
 `
 
-const Button = styled.button`
+const Button = styled.div`
   position: absolute;
   ${CONSTRAINTS.ABSOLUTE_POS_CENTER_HORIZONTAL};
   bottom: 5%;
@@ -46,9 +48,11 @@ const Button = styled.button`
 
 function StartButton() {
   return (
-    <Button onClick={() => { return; }}>
+    <Link href="#mission">
+    <Button>
       <img src={"svg/tri_button.svg"}></img>
     </Button>
+    </Link>
   )
 }
 

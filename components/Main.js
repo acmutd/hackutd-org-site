@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Hero from 'components/Hero';
+import Mission from 'components/Mission';
 
 const Container = styled.div`
   width: 100%;
@@ -14,6 +15,7 @@ export default function Main() {
   return (
     <Container>
       <Hero />
+      <Mission />
     </Container>
   )
 }
