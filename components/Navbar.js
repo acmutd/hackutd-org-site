@@ -53,12 +53,7 @@ const NavItem = styled.li`
 `
 
 
-function NavBar({ refs }) {
-
-  function scrollInto(reference) {
-    reference.current.scrollIntoView();
-  }
-
+function NavBar() {
   return(
     <>
     <NavContainer>
