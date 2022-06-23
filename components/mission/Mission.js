@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import Header from 'components/Header';
-import InlineGradient from 'components/InlineGradient';
+import Header from 'components/shared/Header';
+import InlineGradient from 'components/shared/InlineGradient';
 
 import CONSTRAINTS from 'constants/constraints';
 
@@ -61,9 +61,9 @@ const TeamImage = styled(Image)`
   transition: opacity 0.5s;
   border-radius: 45px;
 
-  ${props => props.fun && `
+  ${props => props.$fun && `
     opacity: 0.01; // hack for some obscure react issue
-    ${props.hovered && `
+    ${props.$hovered && `
       opacity: 1;
     `}
   `}
@@ -94,7 +94,7 @@ export default function Mission() {
       <Grid>
         <ImageContainer onMouseEnter={() => setImageHovered(true)} onMouseLeave={() => setImageHovered(false)}>
           <TeamImage src={default_group} objectFit="cover" layout="fill"/>
-          <TeamImage src={fun_group} hovered={imgHovered} fun objectFit="cover" layout="fill" />
+          <TeamImage src={fun_group} $hovered={imgHovered} $fun objectFit="cover" layout="fill" />
         </ImageContainer>
         <Description>
           <p>

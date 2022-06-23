@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 import CONSTRAINTS from 'constants/constraints';
 
-import Header from 'components/Header';
-import SocialButtons from 'components/SocialButtons';
-import InlineGradient from 'components/InlineGradient';
-import GetInTouchButton from 'components/GetInTouchButton';
-import SmallDivider from 'components/SmallDivider';
-import PartnerHackathons from 'components/PartnerHackathons';
+import Header from 'components/shared/Header';
+import SocialButtons from 'components/support/SocialButtons';
+import InlineGradient from 'components/shared/InlineGradient';
+import GetInTouchButton from 'components/support/GetInTouchButton';
+import SmallDivider from 'components/shared/SmallDivider';
+import PartnerHackathons from 'components/support/PartnerHackathons';
 
 const Spacer = styled.div`
   margin-top: 38px;

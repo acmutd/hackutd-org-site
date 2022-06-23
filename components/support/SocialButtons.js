@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FaInstagram, FaTwitter, FaLinkedin, FaTiktok } from 'react-icons/fa';
 
-import InlineGradient from 'components/InlineGradient';
+import InlineGradient from 'components/shared/InlineGradient';
 
 import LINKS from 'constants/links';
 import CONSTRAINTS from 'constants/constraints';

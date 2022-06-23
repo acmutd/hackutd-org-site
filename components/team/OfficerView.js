@@ -42,7 +42,7 @@ const FunImage = styled.img`
   opacity: 0.01;
   border-radius: 20px;
   transition: opacity 0.5s;
-  ${props => props.hovered && `
+  ${props => props.$hovered && `
     opacity: 1.0;
   `}
 `
@@ -62,7 +62,7 @@ const FunHolder = styled.div`
     border-radius: 20px;
   }
   transition: opacity 0.5s;
-  ${props => props.hovered && `
+  ${props => props.$hovered && `
     opacity: 1.0;
   `}
 `
@@ -76,7 +76,7 @@ export default function OfficerView({ data, index }) {
         <NormalHolder>
           <Image src={data.pic ? data.pic[0] ? data.pic[0] : dog : dog} width={100} height={100}/>
         </NormalHolder>
-        {data.pic && data.pic[1] && <FunHolder hovered={hovered}>
+        {data.pic && data.pic[1] && <FunHolder $hovered={hovered}>
             <Image src={data.pic[1]} width={100} height={100} />
           </FunHolder>}
       </Holder>

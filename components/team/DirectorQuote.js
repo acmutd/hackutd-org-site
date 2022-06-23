@@ -5,7 +5,7 @@ import CONSTRAINTS from 'constants/constraints';
 
 import ancient_vish from 'assets/img/ancient_vish.jpeg';
 
-import InlineGradient from 'components/InlineGradient';
+import InlineGradient from 'components/shared/InlineGradient';
 
 const Wrapper = styled.div`
   width: 100%;

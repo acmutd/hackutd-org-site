@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 // lmao why tf did I choose to implement this by hand i'm dying
 
-import OfficerView from 'components/OfficerView';
+import OfficerView from 'components/team/OfficerView';
 
 import CONSTRAINTS from 'constants/constraints';
 import OFFICERS from 'constants/officers';
@@ -165,7 +165,7 @@ function TeamCarousel() {
             <TeamGrid key={index}>
               {arr.map((item, index) => {
                 return (
-                  <OfficerView data={item} index={index} />
+                  <OfficerView data={item} index={index} key={index} />
                 )
               })}
             </TeamGrid>

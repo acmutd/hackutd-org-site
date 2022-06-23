@@ -88,7 +88,7 @@ const ChooserButton = styled.div`
   }
 `
 
-import HACK_BUBBLES from 'components/HackathonBubble';
+import HACK_BUBBLES from 'components/hackathons/HackathonBubble';
 
 const HACKATHONS_IN_ORDER = [HACKATHON_DATA.EIGHT, HACKATHON_DATA.SEVEN, HACKATHON_DATA.GAME_JAM];
 

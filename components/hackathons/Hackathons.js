@@ -1,5 +1,5 @@
-import Header from 'components/Header';
-import HackathonCarousel from 'components/HackathonCarousel';
+import Header from 'components/shared/Header';
+import HackathonCarousel from 'components/hackathons/HackathonCarousel';
 
 export default function Hackathons() {
   return (

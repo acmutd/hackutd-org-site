@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import Hero from 'components/Hero';
-import Mission from 'components/Mission';
-import Hackathons from 'components/Hackathons';
-import Team from 'components/Team';
-import Support from 'components/Support';
-import OpenSource from 'components/OpenSource';
-import Footer from 'components/Footer';
+import Hero from 'components/hero/Hero';
+import Mission from 'components/mission/Mission';
+import Hackathons from 'components/hackathons/Hackathons';
+import Team from 'components/team/Team';
+import Support from 'components/support/Support';
+import OpenSource from 'components/open_source/OpenSource';
+import Footer from 'components/navigation/Footer';
 
 const Container = styled.div`
   width: 100%;

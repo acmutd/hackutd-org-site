@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import CONSTRAINTS from 'constants/constraints';
 import COLORS from 'constants/colors';
 
-import NavBar from 'components/Navbar';
-import AnimatedLogo from 'components/AnimatedLogo';
-import StartButton from 'components/StartButton';
-import Sparkles from 'components/Sparkles';
+import NavBar from 'components/navigation/Navbar';
+import AnimatedLogo from 'components/hero/AnimatedLogo';
+import StartButton from 'components/hero/StartButton';
+import Sparkles from 'components/sparkles';
 
 
 const Container = styled.div`
@@ -103,6 +103,12 @@ const Skyline = styled.img`
   width: 100vw;
   min-width: 1600px;
   max-height: 40vh;
+
+  ${CONSTRAINTS.DEFAULT_BP} {
+    min-width: 1000px;
+    min-width: none;
+    width: 100vw;
+  }
 `
 
 /** 

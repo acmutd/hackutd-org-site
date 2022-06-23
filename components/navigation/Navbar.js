@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 import CONSTRAINTS from 'constants/constraints';
 
-import MobileNav from 'components/MobileNav';
+import MobileNav from 'components/navigation/MobileNav';
 
 const NavContainer = styled.nav`
   margin-top: 20px;
@@ -58,11 +59,11 @@ function NavBar() {
     <>
     <NavContainer>
       <NavContents>
-        <NavItem><a>Our Mission</a></NavItem>
-        <NavItem><a>Hackathons</a></NavItem>
-        <NavItem><a>Meet the Team</a></NavItem>
-        <NavItem><a>Support Us</a></NavItem>
-        <NavItem><a>Open Source</a></NavItem>
+        <NavItem><Link href="#mission">Our Mission</Link></NavItem>
+        <NavItem><Link href="#hackathons">Hackathons</Link></NavItem>
+        <NavItem><Link href="#team">Meet the Team</Link></NavItem>
+        <NavItem><Link href="#support">Support Us</Link></NavItem>
+        <NavItem><Link href="#open-source">Open Source</Link></NavItem>
       </NavContents>
     </NavContainer>
     <MobileNav/>
