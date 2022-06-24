@@ -35,8 +35,8 @@ import neal_2 from 'assets/img/headshots/Neal-2.jpeg';
 import shreya_1 from 'assets/img/headshots/Shreya-1.jpeg';
 import shreya_2 from 'assets/img/headshots/Shreya-2.jpeg';
 
-import huy_1 from 'assets/img/headshots/Huy-1.jpeg';
-import huy_2 from 'assets/img/headshots/Huy-2.jpeg';
+import mike_1 from 'assets/img/headshots/Mike-1.jpeg';
+import mike_2 from 'assets/img/headshots/Mike-2.jpeg';
 
 import parth_1 from 'assets/img/headshots/Parth-1.jpeg';
 import parth_2 from 'assets/img/headshots/Parth-2.jpeg';
@@ -90,7 +90,7 @@ export default [
   { name: 'Aadit Meenege', team: 'Industry', pic: [aadit_1, aadit_2] },
   { name: 'Neal Gandhi', team: 'Logistics', pic: [neal_1, neal_2] },
   { name: 'Shreya Parihar', team: 'Marketing', pic: [shreya_1, shreya_2] },
-  { name: 'Huy Nguyen', team: 'Experience', pic: [huy_1, huy_2] },
+  { name: 'Mike Nguyen', team: 'Tech', pic: [mike_1, mike_2] },
   { name: 'Parth Amrute', team: 'Industry', pic: [parth_1, parth_2] },
   { name: 'Nate Brown', team: 'Marketing', pic: [nate_1, nate_2] },
   { name: 'Aditya Rathod', team: 'Experience', pic: [aditya_1, aditya_2] },

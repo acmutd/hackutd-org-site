@@ -50,7 +50,7 @@ function StartButton() {
   return (
     <Link href="#mission">
     <Button>
-      <img src={"svg/tri_button.svg"}></img>
+      <img src={"svg/tri_button.svg"} alt="triangular button to move to the next section"></img>
     </Button>
     </Link>
   )

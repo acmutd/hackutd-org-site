@@ -105,7 +105,7 @@ export default function Footer() {
           </Socials>
         </Row>
         <Row>
-          <CuteMessage>There&apos;s no HackUTD...without <img src={'svg/u_love.svg'} />™</CuteMessage>
+          <CuteMessage>There&apos;s no HackUTD...without <img src={'svg/u_love.svg'} alt="Letter 'U' surrounded by a heart" />™</CuteMessage>
           <GetInTouch>Get in Touch: <a href={LINKS.INDUSTRY_MAIL_LINK}>industry@acmutd.co</a></GetInTouch>
         </Row>
       </SubContainer>

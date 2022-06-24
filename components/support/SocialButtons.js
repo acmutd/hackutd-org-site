@@ -47,9 +47,9 @@ const SocialText = styled.div`
 `
 
 // https://github.com/react-icons/react-icons/issues/251
-const SocialButton = ({ Image, link, at }) => (
+const SocialButton = ({ Image, link, at, altText }) => (
   <SocialButtonContainer href={link}>
-        <Image style={{fill: "url(#blue-gradient)"}} />
+        <Image style={{fill: "url(#blue-gradient)"}} alt={altText} />
         <SocialText><InlineGradient>{at}</InlineGradient></SocialText>
 
         {/* This allows us to make gradient dynamic */}
@@ -66,10 +66,10 @@ const SocialButton = ({ Image, link, at }) => (
 function SocialButtons() {
   return (
     <Container>
-      <SocialButton Image={FaInstagram} at="@hackutd" link={LINKS.INSTA} />
-      <SocialButton Image={FaTwitter} at="@hackutd" link={LINKS.TWITTER} />
-      <SocialButton Image={FaLinkedin} at="@hackutd" link={LINKS.LINKEDIN} />
-      <SocialButton Image={FaTiktok} at="@hackutd" link={LINKS.抖音} />
+      <SocialButton Image={FaInstagram} at="@hackutd" link={LINKS.INSTA} altText="Instagram Logo"/>
+      <SocialButton Image={FaTwitter} at="@hackutd" link={LINKS.TWITTER} altText="Twitter Logo"/>
+      <SocialButton Image={FaLinkedin} at="@hackutd" link={LINKS.LINKEDIN} altText="LinkedIn Logo"/>
+      <SocialButton Image={FaTiktok} at="@hackutd" link={LINKS.抖音} altText="Tiktok Logo"/>
     </Container>
   )
 }

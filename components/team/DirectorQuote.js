@@ -82,7 +82,7 @@ function DirectorQuote() {
   return (
     <Wrapper>
       <DirectorImage>
-        <Image src={ancient_vish} width={300} height={270}/>
+        <Image src={ancient_vish} width={300} height={270} alt="HackUTD's Director"/>
       </DirectorImage>
       <EncouragingText>
         <Message>

@@ -93,8 +93,8 @@ export default function Mission() {
       <Header title="Our Mission" givenId="mission" />
       <Grid>
         <ImageContainer onMouseEnter={() => setImageHovered(true)} onMouseLeave={() => setImageHovered(false)}>
-          <TeamImage src={default_group} objectFit="cover" layout="fill"/>
-          <TeamImage src={fun_group} $hovered={imgHovered} $fun objectFit="cover" layout="fill" />
+          <TeamImage src={default_group} objectFit="cover" layout="fill" alt="a team picture of the HackUTD organizers"/>
+          <TeamImage src={fun_group} $hovered={imgHovered} $fun objectFit="cover" layout="fill" alt="a silly team picture of the HackUTD organizers" />
         </ImageContainer>
         <Description>
           <p>

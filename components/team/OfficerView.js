@@ -74,10 +74,10 @@ export default function OfficerView({ data, index }) {
     <Wrapper onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       <Holder>
         <NormalHolder>
-          <Image src={data.pic ? data.pic[0] ? data.pic[0] : dog : dog} width={100} height={100}/>
+          <Image src={data.pic ? data.pic[0] ? data.pic[0] : dog : dog} width={100} height={100} alt={`Image of ${data.name}, a HackUTD Officer.`}/>
         </NormalHolder>
         {data.pic && data.pic[1] && <FunHolder $hovered={hovered}>
-            <Image src={data.pic[1]} width={100} height={100} />
+            <Image src={data.pic[1]} width={100} height={100} alt={`Humorous image of ${data.name}, a HackUTD Officer.`} />
           </FunHolder>}
       </Holder>
         

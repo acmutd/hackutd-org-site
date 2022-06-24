@@ -7,6 +7,7 @@ export default function Home() {
     <>
     <Head>
       <title>HackUTD</title>
+      <meta name="description" content="HackUTD is Texas' largest university-run hackathon." />
     </Head>
     <Main />
     </>

@@ -115,7 +115,7 @@ const SubText = styled.div`
 function HackBubble({ data, selected, children }) {
   return (
     <Container gradientColor={data.gradientColor} selected={selected}>
-      <TitleImage src={data.titleImage} height={300} objectFit="contain"/>
+      <TitleImage src={data.titleImage} height={300} objectFit="contain" alt={`${data.name} title image`} />
       <WebsiteLink href={data.websiteLink}>Visit Website</WebsiteLink>
       <Stats>
         <StatBubble>
@@ -152,7 +152,7 @@ const Vlad = styled.div`
 const GameJam = (props) => (
   <HackBubble data={HACKATHON_DATA.GAME_JAM} {...props} >
     <Vlad>
-      <Image src={vlad} width={300}/>
+      <Image src={vlad} width={300} alt="a cute cartoon bat"/>
     </Vlad>
   </HackBubble>
 )

@@ -6,6 +6,7 @@ import eight_title from 'assets/img/hack_titles/viii.png';
 
 export default {
   SEVEN: {
+    name: 'HackUTD VII',
     gradientColor: 'linear-gradient(203.46deg, #B9EAF5 15.11%, #16AED1 87.07%)',
     titleImage: seven_title,
     websiteLink: 'https://2021.hackutd.co/',
@@ -15,6 +16,7 @@ export default {
     date: "Spring 2021"
   },
   EIGHT: {
+    name: 'HackUTD VIII',
     gradientColor: 'linear-gradient(33deg, rgba(0,0,0,1) 0%, rgba(151,0,217,1) 100%)',
     titleImage: eight_title,
     websiteLink: 'https://hackutd.co/',
@@ -24,6 +26,7 @@ export default {
     date: "Fall 2021"
   },
   GAME_JAM: {
+    name: 'HackUTD Game Jam',
     gradientColor: 'linear-gradient(12deg, rgba(255,176,0,1) 0%, rgba(139,0,205,1) 74%)',
     titleImage: gamejam,
     websiteLink: 'https://gamejam.hackutd.co/',
