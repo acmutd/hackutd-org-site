@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useState, useEffect } from 'react';
 
 import CONSTRAINTS from 'constants/constraints';
 import COLORS from 'constants/colors';
@@ -127,6 +128,13 @@ const ShadowHider = styled.div`
 
 
 export default function Hero() {
+  // dealing with a ssr problem
+  const [showSparkles, setShowSparkles] = useState(false);
+
+  useEffect(() => {
+    setShowSparkles(true);
+  }, [])
+
   return (
     <Container>
       <NavBar />
@@ -135,7 +143,7 @@ export default function Hero() {
           <AnimatedLogo />
           <SupplementalText top>We are</SupplementalText>
           <Title>HackUTD</Title>
-          <SupplementalText>Texas' premier university hackathon.</SupplementalText>
+          <SupplementalText>Texas&apos; premier university hackathon.</SupplementalText>
         </WelcomeContent>
         <SkylineContainer>
           <Skyline src={"svg/skyline.svg"} />
@@ -143,7 +151,7 @@ export default function Hero() {
         </SkylineContainer>
       </ExperimentalFlexContainer>
       <StartButton />
-      <Sparkles />
+      {showSparkles && <Sparkles />}
       <Background />
     </Container>
   )

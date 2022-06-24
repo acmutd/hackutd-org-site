@@ -119,7 +119,7 @@ export default function HackathonCarousel() {
     <TopWrapper>
       <Button onClick={onLeftButtonPress} left><FaChevronRight /></Button>
       {HACK_BUBBLES.map((HackBubble, mapIndex) => {
-        return <HackBubble selected={index == mapIndex} />
+        return <HackBubble selected={index == mapIndex} key={mapIndex}/>
       })}
       <Button onClick={onRightButtonPress}><FaChevronRight /></Button>
     </TopWrapper>
@@ -130,7 +130,8 @@ export default function HackathonCarousel() {
           <ChooserButton 
             onClick={() => setIndex(mapIndex)}
             selected={index == mapIndex} 
-            gradientColor={data.gradientColor} 
+            gradientColor={data.gradientColor}
+            key={mapIndex}
           />
         )
       })}

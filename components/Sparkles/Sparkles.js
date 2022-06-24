@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 
 import Sparkle from './Sparkle';
+// const Sparkle = dynamic(() => import('./Sparkle', { ssr: false }))
 
 import useRandomInterval from 'hooks/useRandomInterval';
 import random, { randomFromArray } from 'functions/random';

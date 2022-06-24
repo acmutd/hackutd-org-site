@@ -95,7 +95,7 @@ export default function Footer() {
     <Container>
       <SubContainer>
         <Row>
-          <Credits>© 2022 HackUTD by <a target="_blank" href={"https://acmutd.co/"}>ACM UTD</a></Credits>
+          <Credits>© 2022 HackUTD by <a target="_blank" rel="noreferrer" href={"https://acmutd.co/"}>ACM UTD</a></Credits>
           <Socials>
             <a href={LINKS.INSTA}><FaInstagram /></a>
             <a href={LINKS.TWITTER}><FaTwitterSquare /></a>
@@ -105,7 +105,7 @@ export default function Footer() {
           </Socials>
         </Row>
         <Row>
-          <CuteMessage>There's no HackUTD...without <img src={'svg/u_love.svg'} />™</CuteMessage>
+          <CuteMessage>There&apos;s no HackUTD...without <img src={'svg/u_love.svg'} />™</CuteMessage>
           <GetInTouch>Get in Touch: <a href={LINKS.INDUSTRY_MAIL_LINK}>industry@acmutd.co</a></GetInTouch>
         </Row>
       </SubContainer>

@@ -14,7 +14,7 @@ const WEHackLink = styled.a`
 function PartnerHackathons() {
   return (
     <>
-    <PartnerDescription>We currently partner with <WEHackLink href={LINKS.WEHACK}>WEHack@UTD</WEHackLink>, Dallas' largest inclusive hackathon. 
+    <PartnerDescription>We currently partner with <WEHackLink href={LINKS.WEHACK}>WEHack@UTD</WEHackLink>, Dallas&apos; largest inclusive hackathon. 
     Be sure to check them out next spring!</PartnerDescription>
     </>
   )

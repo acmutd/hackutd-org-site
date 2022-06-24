@@ -27,11 +27,17 @@ const Container = styled.div`
   z-index: 0;
   overflow: hidden;
   
-  // absolute positioning hack
-  transition: opacity 0.8s;
-  opacity: 0;
+  // transition: opacity 0.8s;
+  // opacity: 0;
+  // display: none;
   position: absolute;
+  visibility: hidden;
+  transition: opacity 0.6s linear, visibility 0.6s linear;
+  opacity: 0;
   ${props =>  props.selected && `
+    // opacity: 1;
+    // display: flex;
+    visibility: visible;
     opacity: 1;
   `}
 

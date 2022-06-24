@@ -17,7 +17,7 @@ export default {
   EIGHT: {
     gradientColor: 'linear-gradient(33deg, rgba(0,0,0,1) 0%, rgba(151,0,217,1) 100%)',
     titleImage: eight_title,
-    websiteLink: 'https://www.hackutd.co',
+    websiteLink: 'https://hackutd.co/',
     numSponsors: '24',
     numParticipants: "800+",
     numSubmissions: "103",
