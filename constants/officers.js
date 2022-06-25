@@ -77,6 +77,9 @@ import muskaan_2 from 'assets/img/headshots/Muskaan-2.jpeg';
 import neha_1 from 'assets/img/headshots/Neha-1.jpeg';
 import neha_2 from 'assets/img/headshots/pool_throw_small.gif';
 
+import angela_1 from 'assets/img/headshots/Angela-1.jpeg';
+import angela_2 from 'assets/img/headshots/Angela-2.jpeg';
+
 export default [
   { name: 'Vishvak Bandi', team: 'Director', pic: [vishvak_1, vishvak_2] },
   { name: 'Chaithu Dikkala', team: 'Logistics', pic: [chai_1, chai_2] },
@@ -103,5 +106,6 @@ export default [
   { name: 'Rees Blatt', team: 'Logistics', pic: [rees_1, rees_2] },
   { name: 'Anjelica Avorque', team: 'Marketing', pic: [anjelica_1, anjelica_2] },
   { name: 'Muskaan Bansal', team: 'Logistics', pic: [muskaan_1, muskaan_2] },
+  { name: 'Angela Wang', team: 'Marketing', pic: [angela_1, angela_2] },
   { name: 'Neha Rode', team: 'Former Director', pic: [neha_1, neha_2] }
 ]
