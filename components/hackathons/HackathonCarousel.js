@@ -79,6 +79,7 @@ const ChooserButton = styled.div`
   height: 20px;
   width: 20px;
   border-radius: 20px;
+  backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
 
   ${props => !props.selected && `&:hover {
     background: ${props.gradientColor};

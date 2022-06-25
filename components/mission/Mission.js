@@ -47,12 +47,21 @@ const ImageContainer = styled.div`
   height: 400px;
   border-radius: 45px;
   position: relative;
-  overflow: hidden;
   // box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
 
   ${CONSTRAINTS.DEFAULT_BP} {
     height: 300px;
   }
+
+  /* &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #EDEDED;
+    transform: translate(-20px, 20px);
+    border-radius: 45px;
+  } */
 `
 
 const TeamImage = styled(Image)`
