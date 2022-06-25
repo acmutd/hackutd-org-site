@@ -79,6 +79,11 @@ const ChooserButton = styled.div`
   height: 20px;
   width: 20px;
   border-radius: 20px;
+
+  ${props => !props.selected && `&:hover {
+    background: ${props.gradientColor};
+    opacity: 0.5;
+  }`}
   ${props => props.selected && `
     background: ${props.gradientColor};
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
