@@ -2,7 +2,7 @@
 
 ## Design 
 
-* [Figma Link](https://www.figma.com/file/CcHbcrvp31oWjqgAvNP3kR/HackUTD-Organizer-Site?node-id=0%3A1) (if you have access)
+* [Figma](https://www.figma.com/file/CcHbcrvp31oWjqgAvNP3kR/HackUTD-Organizer-Site?node-id=0%3A1) (if you have access)
 
 
 ## Code 
