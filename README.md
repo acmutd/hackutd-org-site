@@ -21,7 +21,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Storybook
 
-[Storybook](https://storybook.js.org/) has been configured to facilitate component development for this website. To run storybooks:
+[Storybook](https://storybook.js.org/) has been configured to help facilitate component development for this website. To run storybooks:
 
 ```bash
 yarn storybook
@@ -31,6 +31,8 @@ yarn storybook
 
 * [Styled Components](https://styled-components.com/) for CSS.
 * [Lottie](https://airbnb.design/lottie/) for dynamic SVG animation, namely the logo at the top of the Hero.
+
+This site's philosophy is to use as little external packages as possible. Custom CSS is given priority over Tailwind, MaterialUI etc. Even with what little packages are used, we *still* get obscure deprecation warnings and browser complaints. If you'd like to contribute, please heavily consider before installing a new Node package.
 
 ## Contributions
 
