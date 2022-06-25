@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from 'next/link';
 import styled, { keyframes } from "styled-components";
 import { GoThreeBars } from "react-icons/go";
 import { IoMdClose } from "react-icons/io";
@@ -103,6 +104,10 @@ const ExitButton = styled.div`
 function MobileNav() {
   const [mobilePressed, setMobilePressed] = useState(false);
 
+  function hideMobileNav() {
+    setMobilePressed(false);
+  }
+
   return (
     <>
       <NavButton onClick={() => { setMobilePressed(true) }}>
@@ -118,11 +123,11 @@ function MobileNav() {
             </ExitButton>
           </ExitContainer>
           <Items>
-            <Item>Our Mission</Item>
-            <Item>Hackathons</Item>
-            <Item>Meet the Team</Item>
-            <Item>Support Us</Item>
-            <Item>Open Source</Item>
+            <Link href="#mission"><Item onClick={hideMobileNav}>Our Mission</Item></Link>
+            <Link href="#hackathons"><Item onClick={hideMobileNav}>Hackathons</Item></Link>
+            <Link href="#team"><Item onClick={hideMobileNav}>Meet the Team</Item></Link>
+            <Link href="#support"><Item onClick={hideMobileNav}>Support Us</Item></Link>
+            <Link href="#open-source"><Item onClick={hideMobileNav}>Open Source</Item></Link>
           </Items>
         </MobileSelector>
       )}
