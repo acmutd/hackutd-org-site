@@ -7,7 +7,7 @@ import COLORS from 'constants/colors';
 import NavBar from 'components/navigation/Navbar';
 import AnimatedLogo from 'components/hero/AnimatedLogo';
 import StartButton from 'components/hero/StartButton';
-import Sparkles from 'components/sparkles';
+import Sparkles from 'components/Sparkles';
 
 
 const Container = styled.div`
