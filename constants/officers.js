@@ -83,6 +83,8 @@ import angela_2 from 'assets/img/headshots/Angela-2.jpeg';
 import lily_1 from 'assets/img/headshots/Lily-1.jpeg';
 import lily_2 from 'assets/img/headshots/Lily-2.jpeg';
 
+import tirzah_1 from 'assets/img/headshots/Tirzah-1.jpeg';
+
 
 export default [
   { name: 'Vishvak Bandi', team: 'Director', pic: [vishvak_1, vishvak_2] },
@@ -112,5 +114,6 @@ export default [
   { name: 'Muskaan Bansal', team: 'Logistics', pic: [muskaan_1, muskaan_2] },
   { name: 'Angela Wang', team: 'Marketing', pic: [angela_1, angela_2] },
   { name: 'Lily Vu', team: 'Marketing', pic: [lily_1, lily_2]},
+  { name: 'Tirzah Lo', team: 'Tech', pic: [tirzah_1] },
   { name: 'Neha Rode', team: 'Former Director', pic: [neha_1, neha_2] }
 ]
