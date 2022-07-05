@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import OfficerView from 'components/team/OfficerView';
 
 import CONSTRAINTS from 'constants/constraints';
-import OFFICERS from 'constants/officers';
+import OFFICERS from 'constants/officers.json';
 
 const Wrapper = styled.div`
   width: 100%;
