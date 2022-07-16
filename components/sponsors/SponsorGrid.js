@@ -15,7 +15,7 @@ const Holder = styled.div`
 function SponsorImg({ sponsor }) {
   return (
     <Holder>
-      <a href={sponsor.link} target="_blank">
+      <a href={sponsor.link} target="_blank" rel="noreferrer">
         <Image src={sponsor.img} layout="fill" objectFit='contain'/>
       </a>
     </Holder>
