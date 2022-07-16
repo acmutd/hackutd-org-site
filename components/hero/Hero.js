@@ -16,7 +16,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  max-width: ${CONSTRAINTS.DEFAULT};
+  max-width: ${CONSTRAINTS.DEFAULT_RAW + 200}px;
   height: 100vh;
   min-height: 800px;
   color: white;

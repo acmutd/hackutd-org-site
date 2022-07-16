@@ -4,7 +4,7 @@ import SponsorGrid from 'components/sponsors/SponsorGrid';
 export default function Sponsors() {
   return (
     <>
-    <Header title="Sponsors" />
+    <Header title="Sponsors" givenId="sponsors" />
     <SponsorGrid />
     </>
   )

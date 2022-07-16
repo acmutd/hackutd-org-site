@@ -11,6 +11,10 @@ const NavContainer = styled.nav`
   ${CONSTRAINTS.DEFAULT_BP} {
     display: none;
   }
+  // TODO: Make a better solution for this line
+  /* @media screen and (max-width: ${CONSTRAINTS.DEFAULT_RAW + 100}px) {
+    display: none;
+  } */
 `
 const NavContents = styled.ul`
   list-style-type: none;
@@ -31,6 +35,9 @@ const NavItem = styled.li`
     position: relative;
     &:hover {
       cursor: pointer;
+    }
+    @media screen and (max-width: ${CONSTRAINTS.DEFAULT_RAW + 100}px) {
+      font-size: 16px;
     }
   }
 
@@ -63,6 +70,7 @@ function NavBar() {
         <NavItem><Link href="#hackathons">Hackathons</Link></NavItem>
         <NavItem><Link href="#team">Meet the Team</Link></NavItem>
         <NavItem><Link href="#support">Support Us</Link></NavItem>
+        <NavItem><Link href="#sponsors">Sponsors</Link></NavItem>
         <NavItem><Link href="#open-source">Open Source</Link></NavItem>
       </NavContents>
     </NavContainer>

@@ -127,6 +127,7 @@ function MobileNav() {
             <Link href="#hackathons"><Item onClick={hideMobileNav}>Hackathons</Item></Link>
             <Link href="#team"><Item onClick={hideMobileNav}>Meet the Team</Item></Link>
             <Link href="#support"><Item onClick={hideMobileNav}>Support Us</Item></Link>
+            <Link href="#sponsors"><Item onClick={hideMobileNav}>Sponsors</Item></Link>
             <Link href="#open-source"><Item onClick={hideMobileNav}>Open Source</Item></Link>
           </Items>
         </MobileSelector>
