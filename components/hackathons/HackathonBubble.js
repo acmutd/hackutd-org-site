@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import { FaMoneyBillWave } from 'react-icons/fa';
+import { FaMoneyBillWave, FaHandshake } from 'react-icons/fa';
 import { BsPeopleFill, BsTrophyFill } from 'react-icons/bs';
 
 import HACKATHON_DATA from 'constants/hackathon_data';
@@ -79,6 +79,10 @@ const Stats = styled.div`
   grid-template-columns: repeat(3, minmax(0, 1fr));
   ${CONSTRAINTS.DEFAULT_BP} {
       grid-gap: 10px;
+
+      ${props => props.long && `
+        font-size: 90%;
+      `}
   }
 `
 
@@ -87,6 +91,7 @@ const StatBubble = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   background-color: #FFFFFF40;
   border-radius: 20px;
@@ -109,20 +114,30 @@ const Number = styled.div`
 `
 
 const SubText = styled.div`
-
+  text-align: center;
 `
 
-function HackBubble({ data, selected, children }) {
+// long defines a smaller text size for the bubbles if necessary for styles
+function HackBubble({ data, selected, children, long }) {
   return (
     <Container gradientColor={data.gradientColor} selected={selected}>
       <TitleImage src={data.titleImage} height={300} objectFit="contain" alt={`${data.name} title image`} />
       <WebsiteLink href={data.websiteLink}>Visit Website</WebsiteLink>
-      <Stats>
-        <StatBubble>
-          <FaMoneyBillWave />
-          <Number>{data.numSponsors}</Number>
-          <SubText>Sponsors</SubText>
-        </StatBubble>
+      <Stats long={long}>
+        {data.numSponsors && (
+          <StatBubble>
+            <FaMoneyBillWave />
+            <Number>{data.numSponsors}</Number>
+            <SubText>Sponsors</SubText>
+          </StatBubble>
+        )}
+        {data.numPartners && (
+          <StatBubble long>
+            <FaHandshake />
+            <Number>{data.numPartners}</Number>
+            <SubText>Partner Orgs</SubText>
+          </StatBubble>
+        )}
         <StatBubble>
           <BsPeopleFill />
           <Number>{data.numParticipants}</Number>
@@ -150,7 +165,7 @@ const Vlad = styled.div`
 `
 
 const GameJam = (props) => (
-  <HackBubble data={HACKATHON_DATA.GAME_JAM} {...props} >
+  <HackBubble data={HACKATHON_DATA.GAME_JAM} {...props} long>
     <Vlad>
       <Image src={vlad} width={300} alt="a cute cartoon bat"/>
     </Vlad>
