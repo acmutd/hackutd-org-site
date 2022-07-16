@@ -5,6 +5,7 @@ import Mission from 'components/mission/Mission';
 import Hackathons from 'components/hackathons/Hackathons';
 import Team from 'components/team/Team';
 import Support from 'components/support/Support';
+import Sponsors from 'components/sponsors/Sponsors';
 import OpenSource from 'components/open_source/OpenSource';
 import Footer from 'components/navigation/Footer';
 
@@ -24,6 +25,7 @@ export default function Main() {
       <Hackathons />
       <Team />
       <Support />
+      <Sponsors />
       <OpenSource />
       <Footer />
     </Container>
