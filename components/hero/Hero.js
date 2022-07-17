@@ -8,6 +8,7 @@ import NavBar from 'components/navigation/Navbar';
 import AnimatedLogo from 'components/hero/AnimatedLogo';
 import StartButton from 'components/hero/StartButton';
 import Sparkles from 'components/Sparkles';
+import NineButton from 'components/hero/NineButton';
 
 
 const Container = styled.div`
@@ -144,6 +145,8 @@ export default function Hero() {
           <SupplementalText top>We are</SupplementalText>
           <Title>HackUTD</Title>
           <SupplementalText>Texas&apos; premier university hackathon.</SupplementalText>
+          {/* Enable once we have a website set up. */}
+          {/* <NineButton /> */}
         </WelcomeContent>
         <SkylineContainer>
           <Skyline src={"svg/skyline.svg"} />
