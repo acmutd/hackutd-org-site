@@ -49,7 +49,7 @@ const SPONSORS = {
   STICKER_MULE: {
     name: 'Sticker Mule',
     img: sticker_mule,
-    link: 'https://www.stickermule.com/'
+    link: 'https://mule.to/p33e' // note: link is custom for sponsorship purposes
   }
 }
 
