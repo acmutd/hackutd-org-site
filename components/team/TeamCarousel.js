@@ -135,7 +135,7 @@ function TeamCarousel() {
   function resetTeamArrays() {
     let tempArr = [];
     const arrayLength = 10;
-    for (let i = 0; i < Math.round(OFFICERS.length / arrayLength); ++i) {
+    for (let i = 0; i < Math.ceil(OFFICERS.length / arrayLength); ++i) {
       tempArr.push([]);
       for (let j = 0; j < arrayLength; ++j) {
         let adjustedIndex = (i * arrayLength) + j;
@@ -146,6 +146,7 @@ function TeamCarousel() {
       }
     }
     setTeamArrays(tempArr);
+    console.log(tempArr)
   }
 
   // do this at the beginning
