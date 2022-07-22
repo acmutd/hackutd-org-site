@@ -88,6 +88,7 @@ import tirzah_1 from 'assets/img/headshots/Tirzah-1.jpeg';
 import nick from 'assets/img/headshots/nick-yoshi.gif';
 
 import salman_1 from 'assets/img/headshots/Salman-1.jpeg';
+import salman_2 from 'assets/img/headshots/Salman-2.jpeg';
 
 import anna_1 from 'assets/img/headshots/Anna-1.jpeg';
 
@@ -130,11 +131,11 @@ export default [
   { name: 'Angela Wang', team: 'Marketing', pic: [angela_1, angela_2] },
   { name: 'Lily Vu', team: 'Marketing', pic: [lily_1, lily_2]},
   { name: 'Tirzah Lo', team: 'Tech', pic: [tirzah_1] },
-  { name: 'Salman Jaher', team: 'Marketing', pic: [salman_1] },
+  { name: 'Salman Jaher', team: 'Marketing', pic: [salman_1, salman_2] },
   { name: 'Anna Ernst', team: 'Experience', pic: [anna_1] },
-  { name: 'Avery Bainbridge', team: 'Experience', pic: [avery_1] },
   { name: 'Rishi Meka', team: 'Marketing', pic: [rishi_1, rishi_2] },
   { name: 'Kelly Zhou', team: 'Marketing', pic: [kelly_1, kelly_2] },
+  { name: 'Avery Bainbridge', team: 'Experience', pic: [avery_1] },
   { name: 'Neha Rode', team: 'Former Director', pic: [neha_1, neha_2] },
   { name: 'Nick', team: 'Tech', pic: [nick] }
 ]
