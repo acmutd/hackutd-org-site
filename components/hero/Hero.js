@@ -9,7 +9,7 @@ import AnimatedLogo from 'components/hero/AnimatedLogo';
 import StartButton from 'components/hero/StartButton';
 import Sparkles from 'components/Sparkles';
 import NineButton from 'components/hero/NineButton';
-
+import DarkModeToggle from 'components/shared/DarkModeToggle';
 
 const Container = styled.div`
   // flexy
@@ -137,25 +137,26 @@ export default function Hero() {
   }, [])
 
   return (
-    <Container>
-      <NavBar />
-      <ExperimentalFlexContainer>
-        <WelcomeContent>
-          <AnimatedLogo />
-          <SupplementalText top>We are</SupplementalText>
-          <Title>HackUTD</Title>
-          <SupplementalText>Texas&apos; premier university hackathon.</SupplementalText>
-          {/* Enable once we have a website set up. */}
-          {/* <NineButton /> */}
-        </WelcomeContent>
-        <SkylineContainer>
-          <Skyline src={"svg/skyline.svg"} />
-          <ShadowHider />
-        </SkylineContainer>
-      </ExperimentalFlexContainer>
-      <StartButton />
-      {showSparkles && <Sparkles />}
-      <Background />
-    </Container>
+      <Container>
+        <NavBar />
+        <ExperimentalFlexContainer>
+          <WelcomeContent>
+            <AnimatedLogo />
+            <SupplementalText top>We are</SupplementalText>
+            <Title>HackUTD</Title>
+            <SupplementalText>Texas&apos; premier university hackathon.</SupplementalText>
+            {/* Enable once we have a website set up. */}
+            {/* <NineButton /> */}
+          </WelcomeContent>
+          <SkylineContainer>
+            <Skyline src={"svg/skyline.svg"} />
+            <ShadowHider />
+          </SkylineContainer>
+        </ExperimentalFlexContainer>
+        <StartButton />
+        {showSparkles && <Sparkles />}
+        <Background />
+        <DarkModeToggle />
+      </Container>
   )
 }
