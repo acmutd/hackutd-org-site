@@ -10,6 +10,6 @@ provide a sophisticated UI experience for the majority of togglers of dark/light
 export default {
   HERO_BACKGROUND: {
     light: 'linear-gradient(180deg, #FFB524 3.05%, rgba(255, 0, 214, 0.45) 100%)',
-    dark: undefined
+    dark: 'linear-gradient(180deg, rgba(30,10,255,1) 0%, rgba(157,0,143,1) 100%)'
   },
 }

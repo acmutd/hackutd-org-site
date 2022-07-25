@@ -29,7 +29,7 @@ const Wrapper = styled.div`
     width: 120vw;
     position: absolute;
     height: 115%;
-    background: linear-gradient(180deg, #FFB524 3.05%, rgba(255, 0, 214, 0.45) 100%);
+    background: var(--main-gradient);
     opacity: 0.5;
 
     box-shadow: inset 0 0 15px #00000085;
@@ -146,7 +146,6 @@ function TeamCarousel() {
       }
     }
     setTeamArrays(tempArr);
-    console.log(tempArr)
   }
 
   // do this at the beginning

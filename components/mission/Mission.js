@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
@@ -6,6 +6,7 @@ import Header from 'components/shared/Header';
 import InlineGradient from 'components/shared/InlineGradient';
 
 import CONSTRAINTS from 'constants/constraints';
+import ThemeContext from 'context/ThemeContext';
 
 import default_group from 'assets/img/group/default.jpeg';
 import fun_group from 'assets/img/group/fun.jpeg';
@@ -96,6 +97,7 @@ const AccentLogo = styled.img`
 
 export default function Mission() {
   const [imgHovered, setImageHovered] = useState(false);
+  const { dark } = useContext(ThemeContext);
 
   return (
     <Container>
@@ -117,7 +119,8 @@ export default function Mission() {
           </p>
         </Description>
       </Grid>
-      <AccentLogo src={"svg/accent_logo.svg"} />
+      {!dark && <AccentLogo src={"svg/accent_logo.svg"} />}
+      {dark && <AccentLogo src={"svg/accent_logo_dark.svg"} />}
     </Container>
   )
 }

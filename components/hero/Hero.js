@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 import CONSTRAINTS from 'constants/constraints';
 import COLORS from 'constants/colors';
@@ -10,6 +10,9 @@ import StartButton from 'components/hero/StartButton';
 import Sparkles from 'components/Sparkles';
 import NineButton from 'components/hero/NineButton';
 import DarkModeToggle from 'components/shared/DarkModeToggle';
+
+import ThemeContext from 'context/ThemeContext';
+
 
 const Container = styled.div`
   // flexy
@@ -32,7 +35,7 @@ const Container = styled.div`
 
 /** Gradient background */
 const Background = styled.div`
-  background: ${COLORS.HERO_BACKGROUND.light};
+  background: var(--main-gradient);
   z-index: -1;
 
   width: 100vw;
@@ -122,7 +125,7 @@ const Skyline = styled.img`
 const ShadowHider = styled.div`
   width: 100vw;
   height: 20%;
-  background-color: white;
+  background-color: var(--opposite);
   ${CONSTRAINTS.ABSOLUTE_POS_CENTER_HORIZONTAL}
   bottom: 0;
 `
@@ -131,6 +134,7 @@ const ShadowHider = styled.div`
 export default function Hero() {
   // dealing with a ssr problem
   const [showSparkles, setShowSparkles] = useState(false);
+  const { dark } = useContext(ThemeContext);
 
   useEffect(() => {
     setShowSparkles(true);
@@ -149,7 +153,8 @@ export default function Hero() {
             {/* <NineButton /> */}
           </WelcomeContent>
           <SkylineContainer>
-            <Skyline src={"svg/skyline.svg"} />
+            {dark && <Skyline src={'svg/skyline_dark.svg'}/>}
+            {!dark && <Skyline src={'svg/skyline.svg'} />}
             <ShadowHider />
           </SkylineContainer>
         </ExperimentalFlexContainer>

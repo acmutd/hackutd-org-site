@@ -6,7 +6,7 @@ import LINKS from 'constants/links';
 
 const Container = styled.footer`
   width: 100%;
-  background: linear-gradient(243.93deg, #FFB524 20.24%, rgba(255, 0, 214, 0.6) 125.26%);
+  background: var(--footer-gradient);
   box-shadow: inset 0px 5px 20px rgba(0, 0, 0, 0.25);
   
   display: flex;

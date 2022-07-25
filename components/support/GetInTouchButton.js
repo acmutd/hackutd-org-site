@@ -7,7 +7,7 @@ const Button = styled.a`
   border: none;
   color: white;
   // todo: make dynamic 
-  background: linear-gradient(238.86deg, #FFB524 5.36%, rgba(255, 0, 214, 0.8) 119.14%);
+  background: var(--get-in-touch-gradient);
 
   display: flex;
   flex-direction: row;

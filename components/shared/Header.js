@@ -27,7 +27,7 @@ const HeaderText = styled.h2`
   font-size: 36px;
   margin-bottom: 12px;
 
-  background: linear-gradient(268.4deg, #FFB525 -4.94%, #FF56D6 102.31%);
+  background: var(--header);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -38,7 +38,7 @@ const HeaderText = styled.h2`
 
 const Divider = styled.div`
   height: 6px;
-  background-color: #CECECE;
+  background-color: var(--divider);
   width: 100%;
   border-radius: 5px;
 `

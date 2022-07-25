@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
 import { FaMoon, FaSun } from 'react-icons/fa';
+
+import ThemeContext from "context/ThemeContext";
 
 import galaxy from 'assets/img/galaxy.jpeg';
 import sky from 'assets/img/sky-4.jpg';
@@ -13,14 +15,24 @@ const BASE_WIDTH = 140;
 const BASE_HEIGHT = BASE_WIDTH * 0.5;
 
 const Container = styled.div`
-  position: relative;
   position: absolute;
   top: 20px;
   right: calc(-50px - 5vw);
   @media screen and (max-width: ${CONSTRAINTS.DEFAULT_RAW + 420}px) {
     top: 90px;
     right: 80px;
+    z-index: 2;
   } 
+  @media screen and (max-width: ${CONSTRAINTS.DEFAULT_RAW + 60}px){
+    right: 110px;
+  }
+  ${CONSTRAINTS.DEFAULT_BP} {
+    /* position: fixed;
+    top: auto;
+    right:0;
+    bottom: 0; */
+    display: none;
+  }
 `
 
 const Wrapper = styled.div`
@@ -48,7 +60,7 @@ const BALL_SIZE = BASE_HEIGHT * 1.05;
 const Ball = styled.button`
   outline: none;
   border: none;
-  background-color: white;
+  background-color: ${props => props.on ? "white" : "#DDDDDD"};
   height: ${BALL_SIZE}px;
   width: ${BALL_SIZE}px;
   border-radius: 100%;
@@ -79,7 +91,7 @@ const Ball = styled.button`
 
   // drag target
   &:active {
-    &:before {
+    &:after {
       content: '';
       /* background: blue; */
       width: 500px;
@@ -95,6 +107,9 @@ const Ball = styled.button`
 `
 
 const Galaxy = styled.div`
+  img {
+    border-radius: 30%/100%;
+  }
   position: absolute;
   top: 0;
   left: 0;
@@ -127,11 +142,11 @@ const Sunrise = styled(Galaxy)`
 
 export default function DarkModeToggle() {
   // TODO: have this automatically read from user information
-  const [on, setOn] = useState(true);
+  const { dark, setDark } = useContext(ThemeContext);
 
   function onClick() {
-    setOn(!on);
-    
+    setDark(!dark);
+    localStorage.setItem("dark", !dark);
   }
 
   return (
@@ -139,11 +154,11 @@ export default function DarkModeToggle() {
       
     <Wrapper>
       <Galaxy><Image src={galaxy} width={BASE_WIDTH} height={BASE_HEIGHT} /></Galaxy>
-      <Sunrise on={on}><Image src={sky} width={BASE_WIDTH} height={BASE_HEIGHT} /></Sunrise>
+      <Sunrise on={!dark}><Image src={sky} width={BASE_WIDTH} height={BASE_HEIGHT} /></Sunrise>
       <FaMoon />
       <FaSun />
     </Wrapper>
-    <Ball on={on} onClick={onClick} onDragEnd={onClick} onDragLeave={onClick}/>
+    <Ball on={!dark} onClick={onClick} onDragEnd={onClick} onDragLeave={onClick}/>
     </Container>
   )
 }

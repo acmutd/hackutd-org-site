@@ -14,7 +14,7 @@ const Container = styled.div`
   border-radius: 43px;
   box-shadow: 0px 9px 19px rgba(0, 0, 0, 0.16);
   margin-top: 50px;
-  background-color: white;
+  background-color: var(--raised-button);
   margin-bottom: 100px;
   position: relative;
 
@@ -64,7 +64,7 @@ const HackPortalTitle = styled.h3`
   }
 `
 const Description = styled.p`
-  color: #636363;
+  color: var(--open-source-subtext);
 `
 const cute_bounce = keyframes`
   0% {

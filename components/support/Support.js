@@ -28,7 +28,7 @@ const Container = styled.div`
   }
 `
 const SubHeader = styled.h3`
-  color: #636363;
+  color: var(--subheader);
   font-size: 32px;
   margin-bottom: 13px;
 

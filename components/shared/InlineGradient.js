@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const GradientText = styled.span`
-  background: linear-gradient(268.4deg, #FFB525 -4.94%, #FF56D6 102.31%);
+  background: var(--inline-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

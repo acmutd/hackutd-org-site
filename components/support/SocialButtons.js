@@ -31,6 +31,9 @@ const SocialButtonContainer = styled.a`
   padding: 25px 10px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
+
+  background-color: var(--raised-button);
+
   // fun animation
   transition: transform 0.5s, box-shadow 0.5s;
   transform-origin: bottom;

@@ -4,6 +4,35 @@ import CONSTRAINTS from 'constants/constraints';
 
 // defining styles that should apply across the entire website
 export default createGlobalStyle`
+  &:root {
+    --inline-gradient: linear-gradient(268.4deg, #FFB525 -4.94%, #FF56D6 102.31%);
+    --get-in-touch-gradient: linear-gradient(238.86deg, #FFB524 5.36%, rgba(255, 0, 214, 0.8) 119.14%);
+    ${props => props.dark ? `
+      --main-gradient: linear-gradient(191deg, rgba(89,15,183,1) 0%, rgba(180,0,201,1) 38%, rgba(212,112,15,1) 100%);
+      --primary: white;
+      --opposite: black;
+      --raised-button: #222222;
+      --open-source-subtext: white;
+      --footer-gradient: linear-gradient(20deg, rgba(89,15,183,1) 0%, rgba(180,0,201,1) 38%, rgba(212,112,15,1) 100%);
+      --webkit-scrollbar-gradient: linear-gradient(0deg, rgba(180,0,201,1) 38%, rgba(212,112,15,1) 100%);
+      // --get-in-touch-gradient: linear-gradient(80deg, rgba(89,15,183,1) 0%, rgba(180,0,201,1) 38%, rgba(212,112,15,1) 80%);
+      --subheader: #AAAAAA;
+      --divider: #444444;
+      --header: linear-gradient(10deg, rgba(255, 0, 214, 0.8) 20%, rgba(280,112,15, 0.95) 70%);
+    `:  `
+      --main-gradient: linear-gradient(180deg, #FFB524 3.05%, rgba(255, 0, 214, 0.45) 100%);
+      --primary: black;
+      --opposite: white;
+      --raised-button: white;
+      --open-source-subtext: #636363;
+      --footer-gradient: linear-gradient(243.93deg, #FFB524 20.24%, rgba(255, 0, 214, 0.6) 125.26%);
+      --webkit-scrollbar-gradient: linear-gradient(0deg, #FFB524 3.05%, rgba(255, 0, 214, 0.45) 100%);
+      --subheader: #636363;
+      --divider: #CECECE;
+      --header: linear-gradient(268.4deg, #FFB525 -4.94%, #FF56D6 102.31%);
+    `}
+  }
+
   html {
     scroll-behavior: smooth;
     width: 100vw;
@@ -15,6 +44,11 @@ export default createGlobalStyle`
     margin: 0;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
+
+    background-color: var(--opposite);
+    color: var(--primary);
+
+
   }
   // scrollbar styles : kind of hokey but I think it's a good touch (Chrome/Webkit, does not apply to Firefox)
   body::-webkit-scrollbar {
@@ -24,7 +58,7 @@ export default createGlobalStyle`
     background-color: #DDDDDD;
   }
   body::-webkit-scrollbar-thumb {
-    background: linear-gradient(0deg, #FFB524 3.05%, rgba(255, 0, 214, 0.45) 100%);
+    background: var(--webkit-scrollbar-gradient);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     margin: 5px;
     border-radius: 10px;
