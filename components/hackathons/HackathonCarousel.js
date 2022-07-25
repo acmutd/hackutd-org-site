@@ -55,14 +55,14 @@ const Button = styled.div`
 `
 
 const HackathonDate = styled.div`
-  color: #515151;
+  color: var(--hackathon-date);
   font-size: 22px;
   font-weight: 700;
   margin-top: 16px;
 `
 
 const ChooserContainer = styled.div`
-  background: #D9D9D9;
+  background: var(--hackathon-chooser-bg);
   display: grid;
   grid-auto-flow: column;
   grid-gap: 10px;
