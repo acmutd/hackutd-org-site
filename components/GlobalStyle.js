@@ -7,6 +7,9 @@ export default createGlobalStyle`
   &:root {
     --inline-gradient: linear-gradient(268.4deg, #FFB525 -4.94%, #FF56D6 102.31%);
     --get-in-touch-gradient: linear-gradient(238.86deg, #FFB524 5.36%, rgba(255, 0, 214, 0.8) 119.14%);
+    --hackportal-text-gradient: radial-gradient(circle, rgba(187,131,255,1) 0%, rgba(123,129,255,1) 94%);
+    --hackportal-color: #7B81FF;
+
     ${props => props.dark ? `
       --main-gradient: linear-gradient(191deg, rgba(89,15,183,1) 0%, rgba(180,0,201,1) 38%, rgba(212,112,15,1) 100%);
       --primary: white;

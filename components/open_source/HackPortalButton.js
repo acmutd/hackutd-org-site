@@ -52,15 +52,15 @@ const HackPortalTitle = styled.h3`
   margin-top: 5px;
 
   /* HackPortal Gradient */
-  background: linear-gradient(85.59deg, #C1C8FF -27.5%, #EBC1FF 94.94%);
-  -webkit-background-clip: text;
+  background: var(--hackportal-text-gradient);
+  -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
 
   ${CONSTRAINTS.DEFAULT_BP} {
     font-size: 48px;
-    margin-top: 15px;
+    margin-top: 25px;
   }
 `
 const Description = styled.p`
@@ -76,7 +76,7 @@ const cute_bounce = keyframes`
   }
 `
 const LearnMore = styled.a`
-  color: #C1C8FF;
+  color: var(--hackportal-color);
   text-decoration: underline;
   font-size: 22px;
   align-self: flex-end;
@@ -96,9 +96,9 @@ const LearnMore = styled.a`
 
   ${CONSTRAINTS.DEFAULT_BP} {
     align-self: center;
-    margin-top: 18px;
+    margin-top: 25px;
     color: white;
-    background-color: #C1C8FF;
+    background-color: var(--hackportal-color);
     padding: 12px 12px;
     border-radius: 10px;
     font-weight: 700;
@@ -111,6 +111,8 @@ const StyleRect1 = styled.img`
   transform: rotate(20deg);
   right: -150px;
   bottom: -20%;
+
+  opacity: 0.3;
 `
 const StyleTri1 = styled.img`
   position: absolute;
@@ -118,7 +120,9 @@ const StyleTri1 = styled.img`
   width: 100px;
   transform: rotate(-20deg);
   right: -150px;
-  top: 0%;
+  top: -10%;
+
+  opacity: 0.3;
 `
 
 function HackPortalButton() {
