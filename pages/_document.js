@@ -7,6 +7,8 @@ import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
 
+  // https://stackoverflow.com/questions/61378312/wait-for-css-to-load-on-a-nextjs-static-site
+  // works to fix the styled-components from being applied late
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
