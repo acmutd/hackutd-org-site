@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { useState, useEffect, useContext } from 'react';
 
 import CONSTRAINTS from 'constants/constraints';
-import COLORS from 'constants/colors';
 
 import NavBar from 'components/navigation/Navbar';
 import AnimatedLogo from 'components/hero/AnimatedLogo';
@@ -20,6 +19,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
+  width: 100%;
   max-width: ${CONSTRAINTS.DEFAULT_RAW + 200}px;
   height: 100vh;
   min-height: 800px;
@@ -143,6 +143,7 @@ export default function Hero() {
   return (
       <Container>
         <NavBar />
+        <DarkModeToggle />
         <ExperimentalFlexContainer>
           <WelcomeContent>
             <AnimatedLogo />
@@ -161,7 +162,6 @@ export default function Hero() {
         <StartButton />
         {showSparkles && <Sparkles />}
         <Background />
-        <DarkModeToggle />
       </Container>
   )
 }

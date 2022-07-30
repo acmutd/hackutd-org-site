@@ -24,11 +24,13 @@ const SPONSORS = {
   },
   MLH: {
     name: 'MLH',
-    img: mlh
+    img: mlh,
+    needs_white_bg: true
   },
   CAPITAL_ONE: {
     name: 'Capital One',
-    img: capital_one
+    img: capital_one,
+    needs_white_bg: true
   },
   GOLDMAN_SACHS: {
     name: 'Goldman Sachs',
@@ -44,12 +46,14 @@ const SPONSORS = {
   },
   JPMORGAN_CHASE: {
     name: 'JP Morgan Chase & Co.',
-    img: jpmorgan
+    img: jpmorgan,
+    needs_white_bg: true
   },
   STICKER_MULE: {
     name: 'Sticker Mule',
     img: sticker_mule,
-    link: 'https://mule.to/p33e' // note: link is custom for sponsorship purposes
+    link: 'https://mule.to/p33e', // note: link is custom for sponsorship purposes
+    needs_white_bg: true
   }
 }
 

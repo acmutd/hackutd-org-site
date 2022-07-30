@@ -1,12 +1,13 @@
+import { useContext } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 
 import SPONSORS from 'constants/sponsors';
 import CONSTRAINTS from 'constants/constraints';
+import ThemeContext from 'context/ThemeContext';
 
 import shadow from 'assets/img/half_shadow.png';
 
-// waht even
 const Holder = styled.div`
   position: relative;
   width: 100%;
@@ -28,6 +29,14 @@ const Container = styled.div`
   position: relative;
   padding: 20px;
   box-sizing: border-box;
+
+  ${props => props.dark && `
+    background-color: white;
+    margin-top: 20px;
+    ${CONSTRAINTS.DEFAULT_BP_INVERSE} {
+      border-radius: 43px;
+    }
+  `}
 
   ${CONSTRAINTS.DEFAULT_BP} {
     padding: 15px;
@@ -90,8 +99,10 @@ const ShadowHolder = styled.div`
 `
 
 export default function SponsorGrid() {
+  const { dark } = useContext(ThemeContext);
+
   return (
-    <Container>
+    <Container dark={dark}>
       <Two>
         <SponsorImg sponsor={SPONSORS.FACEBOOK} />
         <SponsorImg sponsor={SPONSORS.STATEFARM} />

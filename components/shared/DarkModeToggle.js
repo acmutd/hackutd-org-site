@@ -24,14 +24,15 @@ const Container = styled.div`
     z-index: 2;
   } 
   @media screen and (max-width: ${CONSTRAINTS.DEFAULT_RAW + 60}px){
-    right: 110px;
+    right: 6vw;
   }
+  // hacky way to make it look ok on mobile
   ${CONSTRAINTS.DEFAULT_BP} {
-    /* position: fixed;
-    top: auto;
-    right:0;
-    bottom: 0; */
-    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: auto;
+    transform: scale(0.88);
   }
 `
 
@@ -68,6 +69,7 @@ const Ball = styled.button`
   position: absolute;
   left: 9%;
   top: -2px;
+  z-index: 1;
   &:hover {
     cursor: grab;
   }
@@ -87,21 +89,19 @@ const Ball = styled.button`
     ` : `
       transform: translateX(-10px);
     `}
-  }
 
-  // drag target
-  &:active {
-    &:after {
-      content: '';
-      /* background: blue; */
-      width: 500px;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      ${props => !props.on && `
-        transform: translateX(-100%);
-      `}
-
+    // touch target for desktop
+    ${CONSTRAINTS.DEFAULT_BP_INVERSE} {
+      &:after {
+        content: '';
+        width: 500px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        ${props => !props.on && `
+          transform: translateX(-100%);
+        `}
+      }
     }
   }
 `
@@ -113,7 +113,7 @@ const Galaxy = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
   user-select: none;
 `
 
@@ -125,21 +125,6 @@ const Sunrise = styled(Galaxy)`
     opacity: 1.0;
   `}
 `
-
-// const Sunrise = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   z-index: -1;
-//   width: 100%;
-//   height: 100%;
-//   background: linear-gradient(180deg, #FFB524 3.05%, rgba(255, 0, 214, 1) 100%);
-//   opacity: 0.0;
-//   transition: opacity 0.5s;
-//   ${props => props.on && `
-//     opacity: 1.0;
-//   `}
-// `
 
 export default function DarkModeToggle() {
   // TODO: have this automatically read from user information

@@ -19,6 +19,7 @@ export default {
     transform: translateY(-50%);
   `,
   DEFAULT_BP: `@media only screen and (max-width: 700px)`,
+  DEFAULT_BP_INVERSE: `@media only screen and (min-width: 700px)`,
   DEFAULT_MARGIN: '10px',
   DEFAULT_MOBILE_WIDTH: '95%'
 }
