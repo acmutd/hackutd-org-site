@@ -31,8 +31,12 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <GlobalStyle dark={dark} />
-      <ThemeContext.Provider value={value}>
+      <GlobalStyle 
+        dark={dark} 
+      />
+      <ThemeContext.Provider 
+        value={value}
+      >
         <Component {...pageProps} />
       </ThemeContext.Provider>
     </>

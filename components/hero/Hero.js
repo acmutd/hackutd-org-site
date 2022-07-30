@@ -102,6 +102,7 @@ const ExperimentalFlexContainer = styled.div`
 
 const SkylineContainer = styled.div`
   position: relative;
+  z-index: 1;
 `
 
 const Skyline = styled.img`
@@ -142,8 +143,11 @@ export default function Hero() {
 
   return (
       <Container>
+
         <NavBar />
+
         <DarkModeToggle />
+
         <ExperimentalFlexContainer>
           <WelcomeContent>
             <AnimatedLogo />
