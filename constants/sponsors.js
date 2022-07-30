@@ -1,5 +1,5 @@
 // raster imports
-import utd_department_cs from 'assets/img/sponsors/utd_department_cs.jpeg';
+import utd_department_cs from 'assets/img/sponsors/utd_department_cs.png';
 // SVG imports
 // for further context, the reason these are in separate locations is because I didn't want to work on configuring
 // an SVG loader for webpack for the default import; this could be a potential future improvement
