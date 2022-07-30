@@ -153,7 +153,7 @@ export default function Hero() {
             <AnimatedLogo />
             <SupplementalText top>We are</SupplementalText>
             <Title>HackUTD</Title>
-            <SupplementalText>Texas&apos; premier university hackathon.</SupplementalText>
+            <SupplementalText>Texas&apos; largest university hackathon.</SupplementalText>
             {/* Enable once we have a website set up. */}
             {/* <NineButton /> */}
           </WelcomeContent>
