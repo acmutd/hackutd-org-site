@@ -61,7 +61,7 @@ const BALL_SIZE = BASE_HEIGHT * 1.05;
 const Ball = styled.button`
   outline: none;
   border: none;
-  background-color: ${props => props.on ? "white" : "#DDDDDD"};
+  background-color: ${props => props.$on ? "white" : "#DDDDDD"};
   height: ${BALL_SIZE}px;
   width: ${BALL_SIZE}px;
   border-radius: 100%;
@@ -76,7 +76,7 @@ const Ball = styled.button`
 
   transition: transform 1s, width 0.5s, border-radius 0.5s;
   transform: translateX(${BASE_WIDTH * 0.4}px);
-  ${props => props.on && `
+  ${props => props.$on && `
     transform: translateX(-15px);
   `}
 
@@ -84,7 +84,7 @@ const Ball = styled.button`
     width: ${BALL_SIZE + 20}px;
     border-radius: 70%/90%;
     margin: 0 auto;
-    ${props => !props.on ? `
+    ${props => !props.$on ? `
       transform: translateX(${BASE_WIDTH * 0.4 - 20}px);
     ` : `
       transform: translateX(-10px);
@@ -98,7 +98,7 @@ const Ball = styled.button`
         height: 100%;
         position: absolute;
         top: 0;
-        ${props => !props.on && `
+        ${props => !props.$on && `
           transform: translateX(-100%);
         `}
       }
@@ -121,7 +121,7 @@ const Sunrise = styled(Galaxy)`
   opacity: 0.0;
   transition: opacity 0.5s;
   z-index: 0;
-  ${props => props.on && `
+  ${props => props.$on && `
     opacity: 1.0;
   `}
 `
@@ -140,11 +140,11 @@ export default function DarkModeToggle() {
       
     <Wrapper>
       <Galaxy><Image src={galaxy} width={BASE_WIDTH} height={BASE_HEIGHT} /></Galaxy>
-      <Sunrise on={!dark}><Image src={sky} width={BASE_WIDTH} height={BASE_HEIGHT} /></Sunrise>
+      <Sunrise $on={!dark}><Image src={sky} width={BASE_WIDTH} height={BASE_HEIGHT} /></Sunrise>
       <FaMoon />
       <FaSun />
     </Wrapper>
-    <Ball on={!dark} onClick={onClick} onDragEnd={onClick} onDragLeave={onClick}/>
+    <Ball $on={!dark} onClick={onClick} onDragEnd={onClick} onDragLeave={onClick}/>
     </Container>
   )
 }
