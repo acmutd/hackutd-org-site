@@ -38,6 +38,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          {/* Google Site Verification */}
+          <meta name="google-site-verification" content="VKp-e5ZWU72xskVNCwCS-6lQoAzYpqu5ZMBJ0_obrkM" />
           {/* Importing the "Inter" font from Google Fonts */}
           <link 
             href= "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" 
