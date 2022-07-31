@@ -6,8 +6,11 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>HackUTD</title>
-      <meta name="description" content="HackUTD is Texas' largest university-run hackathon." />
+      <title>HackUTD | Texas' Largest University Hackathon</title>
+      <meta 
+        name="description" 
+        content="We plan and host HackUTD, Texas' largest university-run hackathon. We also assist other hackathons as part of our greater endeavor to use hacking to bring people together to learn new things"
+      />
       
       {/* Primarily for Apple iMessage previews. OG only works with an absolute path. 
           TODO: use a solution that generates this dynamically instead of requiring a weirdly specific link. */}
