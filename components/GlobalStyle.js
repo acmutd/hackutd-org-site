@@ -62,7 +62,7 @@ export default createGlobalStyle`
     width: 12px;
   }
   body::-webkit-scrollbar {
-    background-color: #DDDDDD;
+    background-color: rgba(0, 0, 0, 0);
   }
   body::-webkit-scrollbar-thumb {
     background: var(--webkit-scrollbar-gradient);
