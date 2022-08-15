@@ -4,9 +4,11 @@ import CONSTRAINTS from 'constants/constraints';
 import LINKS from 'constants/links';
 
 const animateOnAppear = keyframes`
-  from {
+  0% {
     opacity: 0;
-  } to {
+  } 50% {
+    opacity: 0;
+  } 100% {
     opacity: 1;
   }
 `
@@ -23,7 +25,7 @@ const Button = styled.a`
   padding: 5px 40px;
   position: relative;
 
-  animation: ${animateOnAppear} 1s;
+  animation: ${animateOnAppear} 2s;
   transition: box-shadow 0.4s, transform 0.4s;
 
   ${CONSTRAINTS.DEFAULT_BP} {

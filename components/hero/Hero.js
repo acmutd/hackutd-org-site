@@ -48,7 +48,7 @@ const Background = styled.div`
 const WelcomeContent = styled.div`
   margin-top: 30px;
   text-align: center;
-  z-index: 1; // for stars
+  z-index: 2; // for stars
 
   // defines size of logo, ik it's hacky
   // !imporant necessary to get around lottie restrictions, much apology
