@@ -5,5 +5,6 @@ export default {
   抖音: 'https://www.tiktok.com/@hackutd',
   GITHUB_WEBSITE: 'https://github.com/acmutd/hackutd-org-site',
   WEHACK: 'https://wehackutd.com/',
+  HACKUTD_IX_SITE: 'https://ix.hackutd.co',
   INDUSTRY_MAIL_LINK: 'mailto:industry@acmutd.co?subject=HackUTD Sponsorship Inquiry&body='
 }

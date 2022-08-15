@@ -155,7 +155,7 @@ export default function Hero() {
             <Title>HackUTD</Title>
             <SupplementalText>Texas&apos; largest university hackathon.</SupplementalText>
             {/* Enable once we have a website set up. */}
-            {/* <NineButton /> */}
+            <NineButton />
           </WelcomeContent>
           <SkylineContainer>
             {dark && <Skyline src={'svg/skyline_dark.svg'}/>}

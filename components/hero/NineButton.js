@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 import CONSTRAINTS from 'constants/constraints';
+import LINKS from 'constants/links';
 
 const animateOnAppear = keyframes`
   from {
@@ -70,7 +71,7 @@ const Cursor = styled.img`
 
 export default function NineButton() {
   return (
-    <Button href="">
+    <Button href={LINKS.HACKUTD_IX_SITE}>
       <Logo src='/svg/hackutdix.svg' />
       <Cursor src='/svg/cursor.svg' />
     </Button>
