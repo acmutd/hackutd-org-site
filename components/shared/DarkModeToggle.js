@@ -18,10 +18,10 @@ const Container = styled.div`
   position: absolute;
   top: 20px;
   right: calc(-50px - 5vw);
+  z-index: 3;
   @media screen and (max-width: ${CONSTRAINTS.DEFAULT_RAW + 420}px) {
     top: 90px;
     right: 80px;
-    z-index: 2;
   } 
   @media screen and (max-width: ${CONSTRAINTS.DEFAULT_RAW + 60}px){
     right: 6vw;
