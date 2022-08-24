@@ -65,6 +65,10 @@ const GridRow = styled.div`
   }
 `
 
+const TitleSponsor = styled(GridRow)`
+
+`
+
 const One = styled(GridRow)`
   box-sizing: border-box;
   padding: 0px 15%;
@@ -84,7 +88,7 @@ const Three = styled(GridRow)`
 
 const ShadowHolder = styled.div`
   position: absolute;
-  top: -50px;
+  top: -100px;
   opacity: 0.7;
   ${props => props.right ? `
     right: -40px;
@@ -95,7 +99,7 @@ const ShadowHolder = styled.div`
     // background-color: blue;
   `}
   height: 130%;
-  width: 120px;
+  width: 140px;
 `
 
 export default function SponsorGrid() {
@@ -103,6 +107,9 @@ export default function SponsorGrid() {
 
   return (
     <Container dark={dark}>
+      <TitleSponsor>
+        <SponsorImg sponsor={SPONSORS.TOYOTA} />
+      </TitleSponsor>
       <Two>
         <SponsorImg sponsor={SPONSORS.FACEBOOK} />
         <SponsorImg sponsor={SPONSORS.STATEFARM} />

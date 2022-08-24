@@ -1,5 +1,6 @@
 // raster imports
 import utd_department_cs from 'assets/img/sponsors/utd_department_cs.png';
+import toyota from 'assets/img/sponsors/toyota.png';
 // SVG imports
 // for further context, the reason these are in separate locations is because I didn't want to work on configuring
 // an SVG loader for webpack for the default import; this could be a potential future improvement
@@ -54,6 +55,10 @@ const SPONSORS = {
     img: sticker_mule,
     link: 'https://mule.to/p33e', // note: link is custom for sponsorship purposes
     needs_white_bg: true
+  },
+  TOYOTA: {
+    name: 'Toyota',
+    img: toyota
   }
 }
 
