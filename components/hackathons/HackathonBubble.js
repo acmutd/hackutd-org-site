@@ -49,14 +49,15 @@ const Container = styled.div`
 const TitleImage = styled(Image)`
   // height: 100px;
   // NEED TO WORK ON THIS
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
+  ${props => props.paddingNeeded && `
+    padding-top: ${props.paddingNeeded}px !important;
+    padding-bottom: ${props.paddingNeeded}px !important;
+  `}
 
   ${CONSTRAINTS.DEFAULT_BP} {
-       width: 95%;
-      height: auto;
-      max-height: 100px;
       object-fit: contain;
+      padding:0;
+      // background-color: green;
   }
 `
 
@@ -121,8 +122,8 @@ const SubText = styled.div`
 function HackBubble({ data, selected, children, long }) {
   return (
     <Container gradientColor={data.gradientColor} selected={selected}>
-      <TitleImage src={data.titleImage} height={300} objectFit="contain" alt={`${data.name} title image`} />
-      <WebsiteLink href={data.websiteLink}>Visit Website</WebsiteLink>
+      <TitleImage paddingNeeded={data.paddingNeeded} src={data.titleImage} height={400} objectFit="contain" alt={`${data.name} title image`} />
+      {<WebsiteLink href={data.websiteLink ? data.websiteLink : data.devpostLink}>Visit {data.websiteLink ? "Website" : "Devpost"}</WebsiteLink>}
       <Stats long={long}>
         {data.numSponsors && (
           <StatBubble>
@@ -164,20 +165,42 @@ const Vlad = styled.div`
   top: 30%;
 `
 
-const GameJam = (props) => (
+const EIGHT = (props) => (
+  <HackBubble data={HACKATHON_DATA.EIGHT} {...props} />
+)
+const GAME_JAM = (props) => (
   <HackBubble data={HACKATHON_DATA.GAME_JAM} {...props} long>
     <Vlad>
       <Image src={vlad} width={300} alt="a cute cartoon bat"/>
     </Vlad>
   </HackBubble>
 )
-const Eight = (props) => (
-  <HackBubble data={HACKATHON_DATA.EIGHT} {...props} />
-)
-const Seven = (props) => (
+const SEVEN = (props) => (
   <HackBubble data={HACKATHON_DATA.SEVEN} {...props} />
 )
+const SIX = (props) => (
+  <HackBubble data={HACKATHON_DATA.SIX} {...props} />
+)
+const NINETEEN = (props) => (
+  <HackBubble data={HACKATHON_DATA.NINETEEN} {...props} />
+)
+const HACK_FOR_HUMANITY = (props) => (
+  <HackBubble data={HACKATHON_DATA.HACK_FOR_HUMANITY} {...props} />
+)
+const EIGHTEEN = (props) => (
+  <HackBubble data={HACKATHON_DATA.EIGHTEEN} {...props} />
+)
+const SEVENTEEN = (props) => (
+  <HackBubble data={HACKATHON_DATA.SEVENTEEN} {...props} />
+)
+const SIXTEEN = (props) => (
+  <HackBubble data={HACKATHON_DATA.SIXTEEN} {...props} />
+)
+const FIFTEEN = (props) => (
+  <HackBubble data={HACKATHON_DATA.FIFTEEN} {...props} />
+)
 
-const ALL_HACKATHONS = [Eight, Seven, GameJam];
+
+const ALL_HACKATHONS = [EIGHT, SEVEN, GAME_JAM, SIX, NINETEEN, HACK_FOR_HUMANITY, EIGHTEEN, SEVENTEEN, SIXTEEN, FIFTEEN];
 
 export default ALL_HACKATHONS;
