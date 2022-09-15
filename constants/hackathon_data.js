@@ -54,7 +54,8 @@ export default {
     numParticipants: "700+",
     numSubmissions: "110",
     date: "Fall 2019",
-    paddingNeeded: 10
+    paddingNeeded: 10,
+    ignoreMobilePadding: true
   },
   NINETEEN: {
     name: "HackUTD 19",
@@ -65,7 +66,8 @@ export default {
     numParticipants: "500+",
     numSubmissions: "108",
     date: "Spring 2019",
-    paddingNeeded: 10
+    paddingNeeded: 10,
+    ignoreMobilePadding: true
   },
   HACK_FOR_HUMANITY: {
     name: "Hacks for Humanity",
@@ -76,7 +78,8 @@ export default {
     numParticipants: "80+",
     numSubmissions: 12,
     date: "Fall 2018",
-    paddingNeeded: 20
+    paddingNeeded: 20,
+    ignoreMobilePadding: true
   },
   EIGHTEEN: {
     name: "HackUTD 18",
