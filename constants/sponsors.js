@@ -13,6 +13,7 @@ const goldman_sachs = `${SVG_LOC}/goldman_sachs.svg`;
 const facebook = `${SVG_LOC}/facebook.svg`;
 const jpmorgan = `${SVG_LOC}/jpmorgan_chase.svg`;
 const sticker_mule = `${SVG_LOC}/sticker_mule.svg`;
+const standout_stickers = `${SVG_LOC}/standout_stickers.svg`;
 
 const SPONSORS = {
   GOOGLE: {
@@ -59,6 +60,11 @@ const SPONSORS = {
   TOYOTA: {
     name: 'Toyota',
     img: toyota
+  },
+  STANDOUT_STICKERS: {
+    name: "Standout Stickers",
+    img: standout_stickers,
+    link: 'http://hackp.ac/mlh-StandOutStickers-hackathons'
   }
 }
 
