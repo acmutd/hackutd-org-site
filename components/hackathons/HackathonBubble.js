@@ -60,7 +60,7 @@ const TitleImage = styled(Image)`
       ${props => props.ignoreMobilePadding && `
         padding: 0 !important;
       `}
-\  }
+  }
 `
 
 const WebsiteLink = styled.a`
