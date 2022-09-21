@@ -130,7 +130,7 @@ export default [
   { name: 'Muskaan Bansal', team: 'Logistics', pic: [muskaan_1, muskaan_2] },
   { name: 'Angela Wang', team: 'Marketing', pic: [angela_1, angela_2] },
   { name: 'Lily Vu', team: 'Marketing', pic: [lily_1, lily_2]},
-  { name: 'Tirzah Lo', team: 'Tech', pic: [tirzah_1] },
+  // { name: 'Tirzah Lo', team: 'Tech', pic: [tirzah_1] },
   { name: 'Salman Jaher', team: 'Marketing', pic: [salman_1, salman_2] },
   { name: 'Anna Ernst', team: 'Experience', pic: [anna_1] },
   { name: 'Rishi Meka', team: 'Marketing', pic: [rishi_1, rishi_2] },
