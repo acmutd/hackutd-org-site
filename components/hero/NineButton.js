@@ -74,7 +74,7 @@ const Cursor = styled.img`
 export default function NineButton() {
   return (
     <Button href={LINKS.HACKUTD_IX_SITE}>
-      <Logo src='/svg/hackutdix.svg' />
+      <Logo src='/svg/hackutdix_2.svg' />
       <Cursor src='/svg/cursor.svg' />
     </Button>
   )
