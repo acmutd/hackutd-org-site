@@ -33,6 +33,12 @@ const Container = styled.div`
   ${props => !props.isShown && `
     display: none;
   `}
+
+  ${CONSTRAINTS.DEFAULT_BP} {
+    h3 {
+      font-size: 30px;
+    }
+  }
 `
 
 const Background = styled.div`
@@ -71,7 +77,6 @@ const SubContainer = styled.div`
   padding: 30px 60px;
   box-sizing: border-box;
   animation: ${appear2} 0.5s;
-  overflow: scroll;
 
   li {
     margin-top: 30px;
@@ -87,6 +92,8 @@ const SubContainer = styled.div`
 `
 
 const Content = styled.div`
+  height: 100%;
+  overflow: scroll;
   ul {
     list-style: none;
     padding: 0;
