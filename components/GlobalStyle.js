@@ -24,6 +24,7 @@ export default createGlobalStyle`
       --header: linear-gradient(10deg, rgba(255, 0, 214, 0.8) 20%, rgba(280,112,15, 0.95) 70%);
       --hackathon-date: #999999;
       --hackathon-chooser-bg: #444444;
+      --sheet-bg: #333333;
     `:  `
       --main-gradient: linear-gradient(180deg, #FFB524 3.05%, rgba(255, 0, 214, 0.45) 100%);
       --primary: black;
@@ -37,6 +38,7 @@ export default createGlobalStyle`
       --header: linear-gradient(268.4deg, #FFB525 -4.94%, #FF56D6 102.31%);
       --hackathon-date: #515151;
       --hackathon-chooser-bg: #D9D9D9;
+      --sheet-bg: #FFFFFF;
     `}
   }
 

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Header from 'components/shared/Header';
 import InlineGradient from 'components/shared/InlineGradient';
+import More from 'components/mission/More';
 
 import CONSTRAINTS from 'constants/constraints';
 import ThemeContext from 'context/ThemeContext';
@@ -53,16 +54,6 @@ const ImageContainer = styled.div`
   ${CONSTRAINTS.DEFAULT_BP} {
     height: 300px;
   }
-
-  /* &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #EDEDED;
-    transform: translate(-20px, 20px);
-    border-radius: 45px;
-  } */
 `
 
 const TeamImage = styled(Image)`
@@ -95,8 +86,18 @@ const AccentLogo = styled.img`
   right: -50px;
 `
 
+const LearnMore = styled.p`
+  margin-top: 20px;
+  text-decoration: underline;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
+`
+
 export default function Mission() {
   const [imgHovered, setImageHovered] = useState(false);
+  const [showMore, setShowMore] = useState(false);
   const { dark } = useContext(ThemeContext);
 
   return (
@@ -117,6 +118,8 @@ export default function Mission() {
             and host helpful workshops that anyone can attend. Regardless of what we’re working on,
             we aim to make our hackathons <InlineGradient>accessible</InlineGradient> and <InlineGradient>open to everyone</InlineGradient>. Glad to see you here!
           </p>
+          <LearnMore onClick={() => setShowMore(true)}>More about us</LearnMore>
+          <More isShown={showMore} callback={() => setShowMore(false)}/>
         </Description>
       </Grid>
       {!dark && <AccentLogo src={"svg/accent_logo.svg"} />}
