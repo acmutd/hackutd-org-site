@@ -121,7 +121,6 @@ const Question = styled.strong`
 `
 
 const Answer = styled.p`
-  position: relative;
   margin-top: 10px;
   p {
     margin-top: 5px;
@@ -142,11 +141,11 @@ const uwu = keyframes`
 
 const Pluwuto = styled.img`
   width: 100px;
-  position: absolute;
-  right: 0%;
   transform: rotate(15deg);
   filter: grayscale(50%);
   transition: filter 1s;
+  display: block;
+  float: right;
 
   &:hover {
     animation: ${uwu} 2s;
