@@ -36,7 +36,7 @@ const Container = styled.div`
 
   ${CONSTRAINTS.DEFAULT_BP} {
     h3 {
-      font-size: 30px;
+      font-size: 33px;
     }
   }
 `
@@ -93,18 +93,29 @@ const SubContainer = styled.div`
 
 const Content = styled.div`
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   ul {
     list-style: none;
     padding: 0;
-    
+  }
+`
+
+const ExitContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 30px;
+  ${CONSTRAINTS.DEFAULT_BP} {
+    padding: 10px;
   }
 `
 
 const Exit = styled.button`
-  position: absolute;
-  top: 30px;
-  right: 30px;
+  
   color: var(--primary);
 
   font-size: 50px;
@@ -159,15 +170,17 @@ export default function More({ isShown, callback }) {
     <Container isShown={isShown}>
       <Background onClick={() => {callback && callback()}}/>
       <SubContainer>
-        <Exit>
-          <FaTimes 
-            onClick={() => {
-              if (callback) {
-                callback();
-              }
-            }}
-          />
-        </Exit>
+        <ExitContainer>
+          <Exit>
+            <FaTimes 
+              onClick={() => {
+                if (callback) {
+                  callback();
+                }
+              }}
+            />
+          </Exit>
+        </ExitContainer>
         <Content>
          <h3><InlineGradient>Questions and Answers</InlineGradient></h3>
           <ul>
