@@ -94,6 +94,7 @@ const SubContainer = styled.div`
 const Content = styled.div`
   height: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
   ul {
     list-style: none;
     padding: 0;
@@ -118,6 +119,8 @@ const Exit = styled.button`
   
   color: var(--primary);
 
+  width: 50px;
+  height: 50px;
   font-size: 50px;
   border: none;
   background-color: transparent;
