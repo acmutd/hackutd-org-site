@@ -6,5 +6,5 @@ export default {
   GITHUB_WEBSITE: 'https://github.com/acmutd/hackutd-org-site',
   WEHACK: 'https://wehackutd.com/',
   HACKUTD_IX_SITE: 'https://ix.hackutd.co',
-  INDUSTRY_MAIL_LINK: 'mailto:industry@acmutd.co?subject=HackUTD Sponsorship Inquiry&body='
+  INDUSTRY_MAIL_LINK: 'mailto:hello@hackutd.co?subject=HackUTD Sponsorship Inquiry&body='
 }
