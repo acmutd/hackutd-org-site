@@ -100,6 +100,7 @@ import kelly_2 from 'assets/img/headshots/Kelly-2.jpeg';
 import rishi_1 from 'assets/img/headshots/Rishi-1.jpeg';
 import rishi_2 from 'assets/img/headshots/Rishi-2.jpeg';
 
+import mitchell_1 from 'assets/img/headshots/Mitchell-1.jpeg';
 
 
 export default [
@@ -133,9 +134,10 @@ export default [
   // { name: 'Tirzah Lo', team: 'Tech', pic: [tirzah_1] },
   { name: 'Salman Jaher', team: 'Marketing', pic: [salman_1, salman_2] },
   { name: 'Anna Ernst', team: 'Experience', pic: [anna_1] },
-  { name: 'Rishi Meka', team: 'Marketing', pic: [rishi_1, rishi_2] },
+  // { name: 'Rishi Meka', team: 'Marketing', pic: [rishi_1, rishi_2] },
   { name: 'Kelly Zhou', team: 'Marketing', pic: [kelly_1, kelly_2] },
   { name: 'Avery Bainbridge', team: 'Experience', pic: [avery_1] },
-  { name: 'Neha Rode', team: 'Former Director', pic: [neha_1, neha_2] },
-  { name: 'Nick', team: 'Tech', pic: [nick] }
+  { name: 'Mitchell Vu', team: 'Marketing', pic: [mitchell_1] },
+  { name: 'Neha Rode', team: 'Former Director', pic: [neha_1, neha_2] }
+  // { name: 'Nick', team: 'Tech', pic: [nick] }
 ]
