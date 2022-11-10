@@ -138,6 +138,6 @@ export default [
   { name: 'Kelly Zhou', team: 'Marketing', pic: [kelly_1, kelly_2] },
   { name: 'Avery Bainbridge', team: 'Experience', pic: [avery_1] },
   { name: 'Mitchell Vu', team: 'Marketing', pic: [mitchell_1] },
-  { name: 'Neha Rode', team: 'Former Director', pic: [neha_1, neha_2] }
-  // { name: 'Nick', team: 'Tech', pic: [nick] }
+  { name: 'Neha Rode', team: 'Former Director', pic: [neha_1, neha_2] },
+  { name: 'Nick', team: 'Tech', pic: [nick] }
 ]
