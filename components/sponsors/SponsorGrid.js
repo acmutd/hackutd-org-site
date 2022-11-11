@@ -111,25 +111,32 @@ export default function SponsorGrid() {
         <SponsorImg sponsor={SPONSORS.TOYOTA} />
       </TitleSponsor>
       <Two>
-        <SponsorImg sponsor={SPONSORS.FACEBOOK} />
         <SponsorImg sponsor={SPONSORS.STATEFARM} />
+        <SponsorImg sponsor={SPONSORS.EOG} />
       </Two>
       <Three>
         {/* <SponsorImg sponsor={SPONSORS.MLH} /> */}
-        <SponsorImg sponsor={SPONSORS.STANDOUT_STICKERS} />
+        <SponsorImg sponsor={SPONSORS.STUDENT_GOV} />
         <SponsorImg sponsor={SPONSORS.CAPITAL_ONE} />
         <SponsorImg sponsor={SPONSORS.GOLDMAN_SACHS} />
       </Three>
       <Two>
-        <SponsorImg sponsor={SPONSORS.GOOGLE} />
-        <SponsorImg sponsor={SPONSORS.UTD_DPT_CS} />
+        <SponsorImg sponsor={SPONSORS.TI} />
+        <SponsorImg sponsor={SPONSORS.AXXESS} />
+      </Two>
+      <Two>
+        <SponsorImg sponsor={SPONSORS.RING_CENTRAL} />
+        <SponsorImg sponsor={SPONSORS.L3_HARRIS} />
       </Two>
       <One>
+        <SponsorImg sponsor={SPONSORS.CBRE} />
+      </One>
+      {/* <One>
         <SponsorImg sponsor={SPONSORS.STICKER_MULE} />
-      </One>
-      <One jpmorgan>
+      </One> */}
+      {/* <One jpmorgan>
         <SponsorImg sponsor={SPONSORS.JPMORGAN_CHASE} />
-      </One>
+      </One> */}
 
       <ShadowHolder><Image src={shadow} layout="fill" objectFit='contain'/></ShadowHolder>
       <ShadowHolder right><Image src={shadow} layout="fill" objectFit='contain' /></ShadowHolder>

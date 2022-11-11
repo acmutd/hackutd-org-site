@@ -170,7 +170,7 @@ const Pluwuto = styled.img`
 export default function More({ isShown, callback }) {
 
   return (
-    <Container isShown={isShown}>
+    <Container isShown={isShown} suppressHydrationWarning={true}>
       <Background onClick={() => {callback && callback()}}/>
       <SubContainer>
         <ExitContainer>

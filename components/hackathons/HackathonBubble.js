@@ -49,15 +49,15 @@ const Container = styled.div`
 const TitleImage = styled(Image)`
   // height: 100px;
   // NEED TO WORK ON THIS
-  ${props => props.paddingNeeded && `
-    padding-top: ${props.paddingNeeded}px !important;
-    padding-bottom: ${props.paddingNeeded}px !important;
+  ${props => props.paddingneeded && `
+    padding-top: ${props.paddingneeded}px !important;
+    padding-bottom: ${props.paddingneeded}px !important;
   `}
 
   ${CONSTRAINTS.DEFAULT_BP} {
       object-fit: contain;
       padding: 0;
-      ${props => props.ignoreMobilePadding && `
+      ${props => props.$ignoremobilepadding && `
         padding: 0 !important;
       `}
   }
@@ -124,7 +124,7 @@ const SubText = styled.div`
 function HackBubble({ data, selected, children, long }) {
   return (
     <Container gradientColor={data.gradientColor} selected={selected}>
-      <TitleImage paddingNeeded={data.paddingNeeded} ignoreMobilePadding={data.ignoreMobilePadding} src={data.titleImage} height={400} objectFit="contain" alt={`${data.name} title image`} />
+      <TitleImage paddingneeded={data.paddingNeeded} $ignoremobilepadding={data.ignoreMobilePadding} src={data.titleImage} height={400} objectFit="contain" alt={`${data.name} title image`} />
       {<WebsiteLink href={data.websiteLink ? data.websiteLink : data.devpostLink}>Visit {data.websiteLink ? "Website" : "Devpost"}</WebsiteLink>}
       <Stats long={long}>
         {data.numSponsors && (
