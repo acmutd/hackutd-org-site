@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import CONSTRAINTS from 'constants/constraints';
 
-import ancient_vish from 'assets/img/ancient_vish.jpeg';
+import mikul from 'assets/img/headshots/Michael-1.jpeg';
 
 import InlineGradient from 'components/shared/InlineGradient';
 
@@ -82,7 +82,7 @@ function DirectorQuote() {
   return (
     <Wrapper>
       <DirectorImage>
-        <Image src={ancient_vish} width={300} height={270} alt="HackUTD's Director"/>
+        <Image src={mikul} width={300} height={300} alt="HackUTD's Director"/>
       </DirectorImage>
       <EncouragingText>
         <Message>
@@ -91,8 +91,8 @@ function DirectorQuote() {
         </Message>
         <br />
         <Citation>
-          <Name><Hyphen>–</Hyphen>Vishvak Bandi</Name>
-          <Title>Director, HackUTD IX</Title>
+          <Name><Hyphen>–</Hyphen>Michael Zhao</Name>
+          <Title>Director, HackUTD X</Title>
         </Citation>
       </EncouragingText>
     </Wrapper>
