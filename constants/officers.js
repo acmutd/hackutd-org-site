@@ -55,7 +55,7 @@ import kevin_1 from 'assets/img/headshots/KevinG-1.jpeg';
 import kevin_2 from 'assets/img/headshots/KevinG-2.jpeg';
 
 import shoaib_1 from 'assets/img/headshots/ShoaibH-1.jpeg';
-import shoaib_2 from 'assets/img/headshots/ShoaibH-2.jpeg';
+import shoaib_2 from 'assets/img/headshots/ShoaibH-2.JPEG';
 
 import lisa_1 from 'assets/img/headshots/LisaW.jpeg';
 
