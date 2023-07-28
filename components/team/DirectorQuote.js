@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import CONSTRAINTS from 'constants/constraints';
 
-import mikul from 'assets/img/headshots/Michael-1.jpeg';
+import mikul from 'assets/img/mikey.jpg';
 
 import InlineGradient from 'components/shared/InlineGradient';
 
