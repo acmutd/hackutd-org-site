@@ -190,26 +190,20 @@ export default function More({ isShown, callback }) {
             <li>
               <Question>Where is HackUTD?</Question>
               <Answer>
-                  <p>
                     HackUTD is hosted in Richardson, TX, near Dallas and in the DFW metroplex. We&apos;re at the University of Texas at Dallas—one of the nation&apos;s fastest-growing and most promising STEM-focused universities.
-                  </p>
-                  <p>
                     Recently, our hackathon has been held at Engineering and Computer Science (ECS) West, one of UTD&apos;s newest and most beautiful buildings.
-                  </p>
-                </Answer>
+              </Answer>
             </li>
             <li>
               <Question>What makes HackUTD Special?</Question>
-              <Answer>
-                <p>
+              <Answer>           
                 The HackUTD team is focused on much more than just bringing about a yearly hackathon. We help sponsor other hackathons on campus and around DFW, and we host workshops to help hackers get involved before and after hacking.
-                </p>
               </Answer>
             </li>
             <li>
               <Question>Do you have a mascot?</Question>
               <Answer>
-                <p>We don&apos;t have an official HackUTD mascot, but we do have individual mascots for some of our hackathons. Our latest for HackUTD IX is <em>Pluwuto</em>...</p>
+               We don&apos;t have an official HackUTD mascot, but we do have individual mascots for some of our hackathons. Our latest for HackUTD IX is <em>Pluwuto</em>...
                 <Pluwuto src="svg/pluwuto.svg"/>
               </Answer>
             </li>
