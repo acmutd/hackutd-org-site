@@ -19,10 +19,10 @@ const Button = styled.a`
   align-items: center;
   align-self: center;
   height: 130px;
-  background: conic-gradient(from 180deg at 50% 50%, #251E4F 0deg, #17002B 144.37deg, #49134B 316.87deg, #251E4F 360deg);
+  background: conic-gradient(from 180deg at 50% 50%, #1A2132 0deg, #1A2132 144.37deg, #1A2132 316.87deg, #1A2132 360deg);
   box-shadow: 0px 4px 20px 3px rgba(91, 0, 71, 0.6);
   border-radius: 35px;
-  padding: 5px 40px;
+  padding: 5px 100px;
   position: relative;
 
   animation: ${animateOnAppear} 2s;
@@ -31,7 +31,7 @@ const Button = styled.a`
   ${CONSTRAINTS.DEFAULT_BP} {
     height: 100px;
     border-radius: 28px;
-    padding: 5px 25px;
+    padding: 5px 70px;
   }
 
   transform: translateY(5vh);
@@ -71,10 +71,10 @@ const Cursor = styled.img`
   animation: ${animateCursor} 2s;
 `
 
-export default function NineButton() {
+export default function SiteButton() {
   return (
-    <Button href={LINKS.HACKUTD_IX_SITE}>
-      <Logo src='/svg/hackutdix_3.svg' />
+    <Button href={LINKS.HACKUTD_X_SITE}>
+      <Logo src='/svg/hackutdx.svg' />
       <Cursor src='/svg/cursor.svg' />
     </Button>
   )

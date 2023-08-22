@@ -7,7 +7,7 @@ import NavBar from 'components/navigation/Navbar';
 import AnimatedLogo from 'components/hero/AnimatedLogo';
 import StartButton from 'components/hero/StartButton';
 import Sparkles from 'components/Sparkles';
-import NineButton from 'components/hero/NineButton';
+import SiteButton from 'components/hero/SiteButton';
 import DarkModeToggle from 'components/shared/DarkModeToggle';
 
 import ThemeContext from 'context/ThemeContext';
@@ -155,7 +155,7 @@ export default function Hero() {
             <Title>HackUTD</Title>
             <SupplementalText>Texas&apos; largest university hackathon.</SupplementalText>
             {/* Enable once we have a website set up. */}
-            <NineButton />
+            <SiteButton />
           </WelcomeContent>
           <SkylineContainer>
             {dark && <Skyline src={'svg/skyline_dark.svg'}/>}
