@@ -95,7 +95,7 @@ export default function Footer() {
     <Container>
       <SubContainer>
         <Row>
-          <Credits>© 2022 HackUTD by <a target="_blank" rel="noreferrer" href={"https://acmutd.co/"}>ACM UTD</a></Credits>
+          <Credits>© {new Date().getFullYear()} HackUTD by <a target="_blank" rel="noreferrer" href={"https://acmutd.co/"}>ACM UTD</a></Credits>
           <Socials>
             <a href={LINKS.INSTA}><FaInstagram /></a>
             <a href={LINKS.TWITTER}><FaTwitterSquare /></a>
