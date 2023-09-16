@@ -25,6 +25,7 @@ export default [
     { name: "Shagun Dalal", team: "Logistics" },
     { name: "Daniel Liu", team: "Experience" },
     { name: "Salman Jaher", team: "Experience" },
+    { name: "Kevin Ge", team: "Experience" },
     { name: "Evan Ngo", team: "Experience" },
     { name: "Amrit Rathie", team: "Tech" },
     { name: "Geeth Gunnampalli", team: "Tech" },
