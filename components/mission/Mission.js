@@ -62,6 +62,7 @@ const TeamImage = styled(Image)`
   transition: opacity 0.5s;
   border-radius: 45px;
 
+
   ${props => props.$fun && `
     opacity: 0.01; // hack for some obscure react issue
     ${props.$hovered && `
@@ -96,7 +97,6 @@ const LearnMore = styled.p`
 `
 
 export default function Mission() {
-  const [imgHovered, setImageHovered] = useState(false);
   const [showMore, setShowMore] = useState(false);
   const { dark } = useContext(ThemeContext);
 
@@ -104,9 +104,8 @@ export default function Mission() {
     <Container>
       <Header title="Our Mission" givenId="mission" />
       <Grid>
-        <ImageContainer onMouseEnter={() => setImageHovered(true)} onMouseLeave={() => setImageHovered(false)}>
+        <ImageContainer>
           <TeamImage src={default_group} objectFit="cover" layout="fill" alt="a team picture of the HackUTD organizers"/>
-          <TeamImage src={fun_group} $hovered={imgHovered} $fun objectFit="cover" layout="fill" alt="a silly team picture of the HackUTD organizers" />
         </ImageContainer>
         <Description>
           <p>
