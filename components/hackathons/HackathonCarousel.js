@@ -1,148 +1,180 @@
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { FaChevronRight } from 'react-icons/fa';
+import { useEffect, useState } from "react"
+import styled from "styled-components"
+import { FaChevronRight } from "react-icons/fa"
+import { HackBubble } from "components/hackathons/HackathonBubble"
 
-import CONSTRAINTS from 'constants/constraints';
-import HACKATHON_DATA from 'constants/hackathon_data';
+import CONSTRAINTS from "constants/constraints"
+import HACKATHON_DATA from "constants/hackathon_data"
 
 const TopWrapper = styled.div`
-  margin-top: 40px;
-  position: relative;
+    margin-top: 40px;
+    position: relative;
 
-  width: 100%;
-  max-width: ${CONSTRAINTS.DEFAULT};
-  height: 350px;
+    width: 100%;
+    max-width: ${CONSTRAINTS.DEFAULT};
+    height: 380px;
+
+    ${CONSTRAINTS.DEFAULT_BP} {
+        height: 300px;
+    }
 `
 
 const Button = styled.div`
-  border: none;
-  background-color: rgba(217, 217, 217, 0.75);
-  // size management
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  color: #8C8C8C;
-  font-size: 30px;
+    border: none;
+    background-color: rgba(217, 217, 217, 0.75);
+    // size management
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    color: #8c8c8c;
+    font-size: 30px;
 
-  transition: background-color 0.5s;
-  &:hover {
-    cursor: pointer;
-    background-color: rgba(217, 217, 217, 1.0);
-  }
-  // flexy
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    transition: background-color 0.5s;
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(217, 217, 217, 1);
+    }
+    // flexy
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  // positioning
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  ${props => props.left ? `
+    // positioning
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    ${(props) =>
+        props.left
+            ? `
     left: -25px;
     transform: translateY(-50%) scaleX(-1);
     ${CONSTRAINTS.DEFAULT_BP} {
       left: 5px;
     }
-  ` : `
+  `
+            : `
     right: -25px;
     transform: translateY(-50%);
     ${CONSTRAINTS.DEFAULT_BP} {
       right: 5px;
     }
   `}
-
-`
-
-const HackathonDate = styled.div`
-  color: var(--hackathon-date);
-  font-size: 22px;
-  font-weight: 700;
-  margin-top: 16px;
 `
 
 const ChooserContainer = styled.div`
-  background: var(--hackathon-chooser-bg);
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 10px;
-  padding: 6px 10px;
-  border-radius: 20px;
+    background: var(--hackathon-chooser-bg);
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    padding: 6px 10px;
+    border-radius: 20px;
 
-  margin-top: 10px;
+    margin-top: 10px;
 `
 
 const ChooserButton = styled.div`
-  border: none;
-  background: #BEBEBE;
-  // sizing
-  height: 20px;
-  width: 20px;
-  border-radius: 20px;
-  backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+    border: none;
+    background: #bebebe;
+    // sizing
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
 
-  ${props => !props.selected && `&:hover {
-    background: ${props.gradientColor};
+    ${(props) =>
+        !props.selected &&
+        `&:hover {
+    background: var(--main-gradient);
     opacity: 0.5;
   }`}
-  ${props => props.selected && `
-    background: ${props.gradientColor};
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    ${(props) =>
+        props.selected &&
+        `
+      background: var(--main-gradient);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   `}
   &:hover {
-    cursor: pointer;
-  }
+        cursor: pointer;
+    }
 `
 
-import HACK_BUBBLES from 'components/hackathons/HackathonBubble';
+const HackathonDate = styled.div`
+    color: var(--hackathon-date);
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 16px;
+`
 
-const { EIGHT, SEVEN, GAME_JAM, SIX, NINETEEN, HACK_FOR_HUMANITY, EIGHTEEN, SEVENTEEN, SIXTEEN, FIFTEEN } = HACKATHON_DATA;
-const HACKATHONS_IN_ORDER = [EIGHT, SEVEN, GAME_JAM, SIX, NINETEEN, HACK_FOR_HUMANITY, EIGHTEEN, SEVENTEEN, SIXTEEN, FIFTEEN];
+const HACKATHONS = [
+    HACKATHON_DATA.TEN,
+    HACKATHON_DATA.NINE,
+    HACKATHON_DATA.EIGHT,
+    HACKATHON_DATA.SEVEN,
+    HACKATHON_DATA.GAME_JAM,
+    HACKATHON_DATA.SIX,
+    HACKATHON_DATA.NINETEEN,
+    HACKATHON_DATA.HACK_FOR_HUMANITY,
+    HACKATHON_DATA.EIGHTEEN,
+    HACKATHON_DATA.SEVENTEEN,
+    HACKATHON_DATA.SIXTEEN,
+    HACKATHON_DATA.FIFTEEN,
+]
 
 export default function HackathonCarousel() {
-  const [index, setIndex] = useState(0);
-  const [currentHackathon, setCurrentHackathon] = useState(HACKATHONS_IN_ORDER[0]);
+    const [index, setIndex] = useState(0)
+    const [currentHackathon, setCurrentHackathon] = useState(HACKATHONS[0])
 
-  function onLeftButtonPress() {
-    if (index == 0) {
-      setIndex(HACKATHONS_IN_ORDER.length - 1);
-    } else {
-      setIndex(index - 1);
+    function onLeftButtonPress() {
+        if (index == 0) {
+            setIndex(HACKATHONS.length - 1)
+        } else {
+            setIndex(index - 1)
+        }
     }
-  }
-  function onRightButtonPress() {
-   if ((index + 1) == HACKATHONS_IN_ORDER.length) {
-     setIndex(0);
-   } else {
-     setIndex(index + 1);
-   }
-  }
-  useEffect(() => {
-    setCurrentHackathon(HACKATHONS_IN_ORDER[index]);
-  }, [index])
+    function onRightButtonPress() {
+        if (index + 1 == HACKATHONS.length) {
+            setIndex(0)
+        } else {
+            setIndex(index + 1)
+        }
+    }
 
-  return (
-    <>
-    <TopWrapper>
-      <Button onClick={onLeftButtonPress} left><FaChevronRight /></Button>
-      {HACK_BUBBLES.map((HackBubble, mapIndex) => {
-        return <HackBubble selected={index == mapIndex} key={mapIndex}/>
-      })}
-      <Button onClick={onRightButtonPress}><FaChevronRight /></Button>
-    </TopWrapper>
-    <HackathonDate>{currentHackathon.date}</HackathonDate>
-    <ChooserContainer>
-      {HACKATHONS_IN_ORDER.map((data, mapIndex) => {
-        return (
-          <ChooserButton 
-            onClick={() => setIndex(mapIndex)}
-            selected={index == mapIndex} 
-            gradientColor={data.gradientColor}
-            key={mapIndex}
-          />
-        )
-      })}
-    </ChooserContainer>
-    </>
-  )
+    useEffect(() => {
+        setCurrentHackathon(HACKATHONS[index])
+    }, [index])
+
+    return (
+        <>
+            <TopWrapper>
+                <Button onClick={onLeftButtonPress} left>
+                    <FaChevronRight />
+                </Button>
+                {HACKATHONS.map((hackathon, mapIndex) => {
+                    return (
+                        <HackBubble
+                            selected={index == mapIndex}
+                            img={12 - mapIndex}
+                            key={mapIndex}
+                            data={hackathon}
+                        />
+                    )
+                })}
+                <Button onClick={onRightButtonPress}>
+                    <FaChevronRight />
+                </Button>
+            </TopWrapper>
+            <HackathonDate>{currentHackathon.date}</HackathonDate>
+            <ChooserContainer>
+                {HACKATHONS.map((hackathon, mapIndex) => {
+                    return (
+                        <ChooserButton
+                            onClick={() => setIndex(mapIndex)}
+                            selected={index == mapIndex}
+                            key={mapIndex}
+                        />
+                    )
+                })}
+            </ChooserContainer>
+        </>
+    )
 }
