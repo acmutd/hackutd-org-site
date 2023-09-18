@@ -22,7 +22,6 @@ const Container = styled.div`
   width: 100%;
   max-width: ${CONSTRAINTS.DEFAULT_RAW + 200}px;
   height: 100vh;
-  min-height: 800px;
   color: white;
   box-sizing: border-box;
   position: relative;
@@ -101,7 +100,8 @@ const ExperimentalFlexContainer = styled.div`
 `
 
 const SkylineContainer = styled.div`
-  position: relative;
+  position: absolute;
+  bottom: 0%;
   z-index: 1;
 `
 
@@ -157,13 +157,13 @@ export default function Hero() {
             {/* Enable once we have a website set up. */}
             <SiteButton />
           </WelcomeContent>
-          <SkylineContainer>
+        </ExperimentalFlexContainer>
+        <StartButton />
+        <SkylineContainer>
             {dark && <Skyline src={'svg/skyline_dark.svg'}/>}
             {!dark && <Skyline src={'svg/skyline.svg'} />}
             <ShadowHider />
-          </SkylineContainer>
-        </ExperimentalFlexContainer>
-        <StartButton />
+        </SkylineContainer>
         {showSparkles && <Sparkles />}
         <Background />
       </Container>

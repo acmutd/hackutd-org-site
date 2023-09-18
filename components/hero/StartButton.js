@@ -18,7 +18,7 @@ const up_down = keyframes`
 const Button = styled.div`
   position: absolute;
   ${CONSTRAINTS.ABSOLUTE_POS_CENTER_HORIZONTAL};
-  bottom: 5%;
+  bottom: 2%;
   background-color: transparent;
   outline: none;
   border: none;
