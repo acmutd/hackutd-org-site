@@ -41,9 +41,9 @@ export default function OfficerView({ data, index }) {
             <Holder>
                 <NormalHolder>
                     <Image
-                        src={require(`assets/img/headshots/${
+                        src={(data.name === "Nick Burnett" ? require("assets/img/headshots/biggwiggle.gif") : require(`assets/img/headshots/${
                             data.name.split(" ")[0]
-                        }.png`)}
+                        }.png`))}
                         width={200}
                         height={200}
                         alt={`Image of ${data.name}, a HackUTD Officer.`}
