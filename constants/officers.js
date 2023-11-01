@@ -28,7 +28,6 @@ export default [
     { name: "Kevin Ge", team: "Experience" },
     { name: "Evan Ngo", team: "Experience" },
     { name: "Amrit Rathie", team: "Tech" },
-    { name: "Geeth Gunnampalli", team: "Tech" },
     { name: "Mike Nguyen", team: "Tech" },
     { name: "Nam Truong", team: "Tech" },
 ]
