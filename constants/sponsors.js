@@ -21,6 +21,7 @@ const sticker_mule = `${SVG_LOC}/sticker_mule.svg`;
 const standout_stickers = `${SVG_LOC}/standout_stickers.svg`;
 const ti = `${SVG_LOC}/ti.svg`;
 const l3 = `${SVG_LOC}/l3.svg`;
+const veolia = `${SVG_LOC}/veolia.png`;
 
 const SPONSORS = {
   // MARK: - Added for HackUTD IX Sponsors
@@ -112,6 +113,11 @@ const SPONSORS = {
     name: "Standout Stickers",
     img: standout_stickers,
     link: 'http://hackp.ac/mlh-StandOutStickers-hackathons'
+  },
+  VEOLIA: {
+    name: "Veolia",
+    img: veolia,
+    link: "https://www.veolianorthamerica.com/"
   }
 }
 

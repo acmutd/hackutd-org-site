@@ -128,9 +128,10 @@ export default function SponsorGrid() {
         <SponsorImg sponsor={SPONSORS.RING_CENTRAL} />
         <SponsorImg sponsor={SPONSORS.L3_HARRIS} />
       </Two>
-      <One>
+      <Two>
         <SponsorImg sponsor={SPONSORS.CBRE} />
-      </One>
+        <SponsorImg sponsor={SPONSORS.VEOLIA} />
+      </Two>
       {/* <One>
         <SponsorImg sponsor={SPONSORS.STICKER_MULE} />
       </One> */}
