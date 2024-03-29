@@ -29,9 +29,15 @@ const Container = styled.div`
   position: relative;
   padding: 20px;
   box-sizing: border-box;
-
-  ${props => props.dark && `
-    background-color: white;
+  
+  ${props => props.dark ? `
+    background-color: rgb(150, 150, 150);
+    margin-top: 20px;
+    ${CONSTRAINTS.DEFAULT_BP_INVERSE} {
+      border-radius: 43px;
+    }
+  ` : `
+    background-color: rgb(210, 210, 210);
     margin-top: 20px;
     ${CONSTRAINTS.DEFAULT_BP_INVERSE} {
       border-radius: 43px;
@@ -86,6 +92,10 @@ const Three = styled(GridRow)`
   grid-template-columns: 1fr 1fr 1fr;
 `
 
+const Four = styled(GridRow)`
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+`
+
 const ShadowHolder = styled.div`
   position: absolute;
   top: -100px;
@@ -107,37 +117,48 @@ export default function SponsorGrid() {
 
   return (
     <Container dark={dark}>
-      <TitleSponsor>
+      <Three>
+        <SponsorImg sponsor={SPONSORS.GOLDMAN_SACHS} />
         <SponsorImg sponsor={SPONSORS.TOYOTA} />
-      </TitleSponsor>
-      <Two>
+        <SponsorImg sponsor={SPONSORS.FIDELITY} />
+      </Three>
+      <Four>
         <SponsorImg sponsor={SPONSORS.STATEFARM} />
         <SponsorImg sponsor={SPONSORS.EOG} />
-      </Two>
+        <SponsorImg sponsor={SPONSORS.CBRE} />
+        <SponsorImg sponsor={SPONSORS.FRONTIER} />
+      </Four>
       <Three>
-        {/* <SponsorImg sponsor={SPONSORS.MLH} /> */}
-        <SponsorImg sponsor={SPONSORS.STUDENT_GOV} />
-        <SponsorImg sponsor={SPONSORS.CAPITAL_ONE} />
-        <SponsorImg sponsor={SPONSORS.GOLDMAN_SACHS} />
+        <SponsorImg sponsor={SPONSORS.FANNIE_MAE} />
+        <SponsorImg sponsor={SPONSORS.JPMORGAN_CHASE} />
+        <SponsorImg sponsor={SPONSORS.GEICO} />
+      </Three>
+      <Three>
+        <SponsorImg sponsor={SPONSORS.PRHI} />
+        <SponsorImg sponsor={SPONSORS.AXXESS} />
+        <SponsorImg sponsor={SPONSORS.CORE_LOGIC} />
       </Three>
       <Two>
-        <SponsorImg sponsor={SPONSORS.TI} />
-        <SponsorImg sponsor={SPONSORS.AXXESS} />
+        <SponsorImg sponsor={SPONSORS.NORDVPN}/>
+        <SponsorImg sponsor={SPONSORS.INCOGNI}/>
       </Two>
       <Two>
         <SponsorImg sponsor={SPONSORS.RING_CENTRAL} />
         <SponsorImg sponsor={SPONSORS.L3_HARRIS} />
       </Two>
       <Two>
-        <SponsorImg sponsor={SPONSORS.CBRE} />
+        <SponsorImg sponsor={SPONSORS.TI} />
         <SponsorImg sponsor={SPONSORS.VEOLIA} />
       </Two>
-      {/* <One>
-        <SponsorImg sponsor={SPONSORS.STICKER_MULE} />
-      </One> */}
-      {/* <One jpmorgan>
-        <SponsorImg sponsor={SPONSORS.JPMORGAN_CHASE} />
-      </One> */}
+      <Two>
+        <SponsorImg sponsor={SPONSORS.STUDENT_GOV} /> 
+        <SponsorImg sponsor={SPONSORS.CAPITAL_ONE} />
+      </Two>
+      <Three>
+        <SponsorImg sponsor={SPONSORS.STANDOUT_STICKERS}/>
+        <SponsorImg sponsor={SPONSORS.MME}/>
+        <SponsorImg sponsor={SPONSORS.STICKER_MULE}/>
+      </Three>
 
       <ShadowHolder><Image src={shadow} layout="fill" objectFit='contain'/></ShadowHolder>
       <ShadowHolder right><Image src={shadow} layout="fill" objectFit='contain' /></ShadowHolder>

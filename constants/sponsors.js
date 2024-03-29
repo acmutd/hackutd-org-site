@@ -22,6 +22,17 @@ const standout_stickers = `${SVG_LOC}/standout_stickers.svg`;
 const ti = `${SVG_LOC}/ti.svg`;
 const l3 = `${SVG_LOC}/l3.svg`;
 const veolia = `${SVG_LOC}/veolia.png`;
+const CoreLogic = `${SVG_LOC}/CoreLogic.png`
+const FannieMae = `${SVG_LOC}/FannieMae.png`
+const Fidelity = `${SVG_LOC}/Fidelity.png`
+const Frontier = `${SVG_LOC}/Frontier.png`
+const Geico = `${SVG_LOC}/Geico.png`
+const Incogni = `${SVG_LOC}/Incogni.png`
+const MME = `${SVG_LOC}/MME.jpeg`
+const NordPass = `${SVG_LOC}/NordPass.png`
+const NordVPN = `${SVG_LOC}/NordVPN.png`
+const PRHI = `${SVG_LOC}/PRHI.png`
+
 
 const SPONSORS = {
   // MARK: - Added for HackUTD IX Sponsors
@@ -118,6 +129,56 @@ const SPONSORS = {
     name: "Veolia",
     img: veolia,
     link: "https://www.veolianorthamerica.com/"
+  },
+  CORE_LOGIC: {
+    name: "Core Logic",
+    img: CoreLogic,
+    link: "https://www.corelogic.com/culture/",
+  },
+  FANNIE_MAE: {
+    name: "Fannie Mae",
+    img: FannieMae, 
+    link: "https://www.fanniemae.com/careers",
+  },
+  FIDELITY: {
+    name: "Fidelity",
+    img: Fidelity,
+    link: "https://leap.fidelitycareers.com"
+  },
+  FRONTIER: {
+    name: "Frontier",
+    img: Frontier,
+    link: "https://frontier-careers.com/"
+  },
+  GEICO: {
+    name: "Geico",
+    img: Geico, 
+    link: "https://geico.wd1.myworkdayjobs.com/External",
+  },
+  INCOGNI: {
+    name: "Incogni",
+    img: Incogni,
+    link: "https://incogni.com/",
+  },
+  MME: {
+    name: "Modern Market Eatery",
+    img: MME,
+    link: "https://modernmarket.com/",
+  },
+  NORDPASS: {
+    name: "Nord Pass",
+    link: "https://nordpass.com/",
+    img: NordPass,
+  },
+  NORDVPN: {
+    name: "Nord VPN",
+    link: "https://nordvpn.com/",
+    img: NordVPN,
+  },
+  PRHI: {
+    name: "PRHI",
+    img: PRHI,
+    link: "http://patientsafetytech.com/",
   }
 }
 
