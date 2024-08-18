@@ -14,7 +14,6 @@ export default [
   { name: "Shreya Mekala", team: "Logistics" },
   { name: "Roshni Reddhannan", team: "Logistics" },
   { name: "Sahishnu Sagiraju", team: "Logistics" },
-  { name: "Alexander Tifase", team: "Logistics" },
   { name: "Bhuvana Madiraju", team: "Industry" },
   { name: "Sharun Naicker", team: "Industry" },
   { name: "Sachi Hansalia", team: "Industry" },
@@ -34,6 +33,5 @@ export default [
   { name: "Sarah Jacob", team: "Marketing" },
   { name: "Caleb Bae", team: "Marketing" },
   { name: "Fatin Chad", team: "Finance" },
-  { name: "Andrew Goodland", team: "Finance" },
   { name: "Ayusha Timalsena", team: "Finance" },
-]
+];
