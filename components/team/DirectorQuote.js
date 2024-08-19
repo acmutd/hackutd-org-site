@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import Image from 'next/image';
+import styled from "styled-components";
+import Image from "next/image";
 
-import CONSTRAINTS from 'constants/constraints';
+import CONSTRAINTS from "constants/constraints";
 
-import mikul from 'assets/img/mikey.jpg';
+import salman_purva from "assets/img/salman_purva.png";
 
-import InlineGradient from 'components/shared/InlineGradient';
+import InlineGradient from "components/shared/InlineGradient";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -28,14 +28,13 @@ const Wrapper = styled.div`
     align-items: center;
     justify-items: center;
   }
-`
+`;
 
 const DirectorImage = styled.div`
   img {
     border-radius: 35px;
   }
-  
-`
+`;
 
 const EncouragingText = styled.div`
   // margin: 30px;
@@ -50,53 +49,63 @@ const EncouragingText = styled.div`
     }
     margin: 20px;
   }
-`
+`;
 
 const Message = styled.p`
   font-weight: 200;
-`
+`;
 
 const Citation = styled.div`
   ${CONSTRAINTS.DEFAULT_BP} {
     align-self: flex-end;
     margin-top: 8px;
   }
-`
+`;
 
 const Name = styled.p`
   font-weight: 200;
   font-style: italic;
   position: relative;
-`
+`;
 
 const Hyphen = styled.span`
   position: absolute;
   left: -13px;
-`
+`;
 
 const Title = styled.p`
   font-weight: 700;
-`
+`;
 
 function DirectorQuote() {
   return (
     <Wrapper>
       <DirectorImage>
-        <Image src={mikul} width={300} height={300} alt="HackUTD's Director"/>
+        <Image
+          src={salman_purva}
+          width={300}
+          height={263}
+          alt="HackUTD's Director"
+        />
       </DirectorImage>
       <EncouragingText>
         <Message>
-          Our team works from the start of the year to deliver an excellent hackathon experience.
-          Without our team members, <InlineGradient>none of this would be possible.</InlineGradient>
+          We're the directors of HackUTD this year and are very excited for the
+          next iteration of our event. Our team works hard all year round to
+          make our events possible, and we can't wait to put on one more
+          successful hackathon!
         </Message>
         <br />
         <Citation>
-          <Name><Hyphen>–</Hyphen>Michael Zhao</Name>
-          <Title>Director, HackUTD X</Title>
+          <Name>
+            <Hyphen>–</Hyphen>Purva Pawar &amp; Salman Jaher
+          </Name>
+          <Title>Co-Directors, HackUTD '24</Title>
         </Citation>
       </EncouragingText>
     </Wrapper>
-  )
+  );
 }
 
 export default DirectorQuote;
+
