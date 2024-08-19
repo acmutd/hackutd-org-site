@@ -1,8 +1,18 @@
 // helpful: https://cssgradient.io/
 
 export default {
+    TWENTY_FOUR: {
+        name: "HackUTD 2024",
+        websiteLink: "https://ripple.hackutd.co",
+        date: "Fall 2024",
+    },
     TEN: {
-        name: "HackUTD VIII",
+        name: "HackUTD X",
+        websiteLink: "https://x.hackutd.co",
+        date: "Fall 2023"
+    },
+    AXXESS_23: {
+        name: "Axxess Hackathon 2023",
         websiteLink: "https://www.axxess.com/hackathon",
         date: "Spring 2023",
     },

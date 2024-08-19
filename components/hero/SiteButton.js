@@ -1,7 +1,7 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
-import CONSTRAINTS from 'constants/constraints';
-import LINKS from 'constants/links';
+import CONSTRAINTS from "constants/constraints";
+import LINKS from "constants/links";
 
 const animateOnAppear = keyframes`
   0% {
@@ -11,7 +11,7 @@ const animateOnAppear = keyframes`
   } 100% {
     opacity: 1;
   }
-`
+`;
 
 const Button = styled.a`
   display: inline-flex;
@@ -19,10 +19,15 @@ const Button = styled.a`
   align-items: center;
   align-self: center;
   height: 130px;
-  background: conic-gradient(from 180deg at 50% 50%, #1A2132 0deg, #1A2132 144.37deg, #1A2132 316.87deg, #1A2132 360deg);
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #1a2132 0deg,
+    #1a2132 144.37deg,
+    #1a2132 316.87deg,
+    #1a2132 360deg
+  );
   box-shadow: 0px 4px 20px 3px rgba(91, 0, 71, 0.6);
   border-radius: 35px;
-  padding: 5px 100px;
   position: relative;
 
   animation: ${animateOnAppear} 2s;
@@ -31,7 +36,6 @@ const Button = styled.a`
   ${CONSTRAINTS.DEFAULT_BP} {
     height: 100px;
     border-radius: 28px;
-    padding: 5px 70px;
   }
 
   transform: translateY(5vh);
@@ -43,12 +47,12 @@ const Button = styled.a`
     }
     transform: translateY(calc(5vh + 2px));
   }
-`
+`;
 
 const Logo = styled.img`
   height: 100%;
   transform: translateY(-3px);
-`
+`;
 
 const animateCursor = keyframes`
   0% {
@@ -59,7 +63,7 @@ const animateCursor = keyframes`
   } 100% {
     opacity: 1;
   }
-`
+`;
 
 const Cursor = styled.img`
   position: absolute;
@@ -69,13 +73,13 @@ const Cursor = styled.img`
   transition: opacity 0.2s;
 
   animation: ${animateCursor} 2s;
-`
+`;
 
 export default function SiteButton() {
   return (
-    <Button href={LINKS.HACKUTD_X_SITE}>
-      <Logo src='/svg/hackutdx.svg' />
-      <Cursor src='/svg/cursor.svg' />
+    <Button href={LINKS.HACKUTD_24_SITE}>
+      <Logo src="/svg/HackUTD24.svg" />
+      <Cursor src="/svg/cursor.svg" />
     </Button>
-  )
+  );
 }

@@ -1,10 +1,9 @@
+import { FaTimes } from "react-icons/fa";
+import styled, { keyframes } from "styled-components";
 
-import { FaTimes } from 'react-icons/fa';
-import styled, { keyframes } from 'styled-components';
+import InlineGradient from "components/shared/InlineGradient";
 
-import InlineGradient from 'components/shared/InlineGradient';
-
-import CONSTRAINTS from 'constants/constraints';
+import CONSTRAINTS from "constants/constraints";
 
 const appear = keyframes`
   from {
@@ -12,7 +11,7 @@ const appear = keyframes`
   } to {
     opacity: 100%;
   }
-`
+`;
 
 const Container = styled.div`
   position: fixed;
@@ -30,7 +29,9 @@ const Container = styled.div`
     font-size: 40px;
   }
 
-  ${props => !props.isShown && `
+  ${(props) =>
+    !props.isShown &&
+    `
     display: none;
   `}
 
@@ -39,7 +40,7 @@ const Container = styled.div`
       font-size: 33px;
     }
   }
-`
+`;
 
 const Background = styled.div`
   position: absolute;
@@ -51,7 +52,7 @@ const Background = styled.div`
   &:hover {
     cursor: pointer;
   }
-`
+`;
 
 const appear2 = keyframes`
   from {
@@ -61,7 +62,7 @@ const appear2 = keyframes`
     opacity: 100%;
     transform: translateY(0px);
   }
-`
+`;
 
 const SubContainer = styled.div`
   // todo: change these fonts
@@ -89,7 +90,7 @@ const SubContainer = styled.div`
     margin-top: 8vh;
     padding: 30px 5vw;
   }
-`
+`;
 
 const Content = styled.div`
   height: 100%;
@@ -99,7 +100,7 @@ const Content = styled.div`
     list-style: none;
     padding: 0;
   }
-`
+`;
 
 const ExitContainer = styled.div`
   position: absolute;
@@ -113,10 +114,9 @@ const ExitContainer = styled.div`
   ${CONSTRAINTS.DEFAULT_BP} {
     padding: 10px;
   }
-`
+`;
 
 const Exit = styled.button`
-  
   color: var(--primary);
 
   width: 50px;
@@ -128,18 +128,18 @@ const Exit = styled.button`
   &:hover {
     cursor: pointer;
   }
-`
+`;
 
 const Question = styled.strong`
   font-size: 130%;
-`
+`;
 
 const Answer = styled.p`
   margin-top: 10px;
   p {
     margin-top: 5px;
   }
-`
+`;
 
 const uwu = keyframes`
   0% {
@@ -151,7 +151,7 @@ const uwu = keyframes`
   100% {
     transform: rotate(15deg);
   }
-`
+`;
 
 const Pluwuto = styled.img`
   width: 100px;
@@ -165,17 +165,20 @@ const Pluwuto = styled.img`
     animation: ${uwu} 2s;
     filter: grayscale(0%);
   }
-`
+`;
 
 export default function More({ isShown, callback }) {
-
   return (
     <Container isShown={isShown} suppressHydrationWarning={true}>
-      <Background onClick={() => {callback && callback()}}/>
+      <Background
+        onClick={() => {
+          callback && callback();
+        }}
+      />
       <SubContainer>
         <ExitContainer>
           <Exit>
-            <FaTimes 
+            <FaTimes
               onClick={() => {
                 if (callback) {
                   callback();
@@ -185,26 +188,35 @@ export default function More({ isShown, callback }) {
           </Exit>
         </ExitContainer>
         <Content>
-         <h3><InlineGradient>Questions and Answers</InlineGradient></h3>
+          <h3>
+            <InlineGradient>Questions and Answers</InlineGradient>
+          </h3>
           <ul>
             <li>
               <Question>Where is HackUTD?</Question>
               <Answer>
-                    HackUTD is hosted in Richardson, TX, near Dallas and in the DFW metroplex. We&apos;re at the University of Texas at Dallas—one of the nation&apos;s fastest-growing and most promising STEM-focused universities.
-                    Recently, our hackathon has been held at Engineering and Computer Science (ECS) West, one of UTD&apos;s newest and most beautiful buildings.
+                HackUTD is hosted in Richardson, TX, near Dallas and in the DFW
+                metroplex. We&apos;re at the University of Texas at Dallas—one
+                of the nation&apos;s fastest-growing and most promising
+                STEM-focused universities. Recently, our hackathon has been held
+                at Engineering and Computer Science (ECS) West, one of
+                UTD&apos;s newest and most beautiful buildings.
               </Answer>
             </li>
             <li>
               <Question>What makes HackUTD Special?</Question>
-              <Answer>           
-                The HackUTD team is focused on much more than just bringing about a yearly hackathon. We help sponsor other hackathons on campus and around DFW, and we host workshops to help hackers get involved before and after hacking.
+              <Answer>
+                The HackUTD team is focused on much more than just bringing
+                about a yearly hackathon. We help sponsor other hackathons on
+                campus and around DFW, and we host workshops to help hackers get
+                involved before and after hacking.
               </Answer>
             </li>
             <li>
               <Question>Do you have a mascot?</Question>
               <Answer>
-               We don&apos;t have an official HackUTD mascot, but we do have individual mascots for some of our hackathons. Our latest for HackUTD IX is <em>Pluwuto</em>...
-                <Pluwuto src="svg/pluwuto.svg"/>
+                This year we are introducing 5 new mascots, one of which might
+                become a permanent addition. Keep an eye out for it!
               </Answer>
             </li>
             <li>
@@ -215,5 +227,6 @@ export default function More({ isShown, callback }) {
         </Content>
       </SubContainer>
     </Container>
-  )
+  );
 }
+

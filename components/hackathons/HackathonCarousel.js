@@ -107,6 +107,7 @@ const HackathonDate = styled.div`
 
 const HACKATHONS = [
     HACKATHON_DATA.TEN,
+    HACKATHON_DATA.AXXESS_23,
     HACKATHON_DATA.NINE,
     HACKATHON_DATA.EIGHT,
     HACKATHON_DATA.SEVEN,
@@ -153,7 +154,7 @@ export default function HackathonCarousel() {
                     return (
                         <HackBubble
                             selected={index == mapIndex}
-                            img={12 - mapIndex}
+                            img={HACKATHONS.length - mapIndex}
                             key={mapIndex}
                             data={hackathon}
                         />
