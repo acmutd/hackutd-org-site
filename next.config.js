@@ -15,7 +15,13 @@ const nextConfig = {
     return [
       {
         source: "/register",
-        destination: "https://x.hackutd.co/register",
+        destination: "https://ripple.hackutd.co/register",
+        permanent: false,
+        basePath: false,
+      },
+      {
+        source: "/registration",
+        destination: "https://ripple.hackutd.co/register",
         permanent: false,
         basePath: false,
       },
