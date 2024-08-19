@@ -106,7 +106,6 @@ const HackathonDate = styled.div`
 `
 
 const HACKATHONS = [
-    HACKATHON_DATA.TWENTY_FOUR,
     HACKATHON_DATA.TEN,
     HACKATHON_DATA.AXXESS_23,
     HACKATHON_DATA.NINE,
