@@ -22,7 +22,6 @@ const Button = styled.a`
   background: conic-gradient(from 180deg at 50% 50%, #1A2132 0deg, #1A2132 144.37deg, #1A2132 316.87deg, #1A2132 360deg);
   box-shadow: 0px 4px 20px 3px rgba(91, 0, 71, 0.6);
   border-radius: 35px;
-  padding: 5px 100px;
   position: relative;
 
   animation: ${animateOnAppear} 2s;
@@ -73,8 +72,8 @@ const Cursor = styled.img`
 
 export default function SiteButton() {
   return (
-    <Button href={LINKS.HACKUTD_X_SITE}>
-      <Logo src='/svg/hackutdx.svg' />
+    <Button href={LINKS.HACKUTD_24_SITE}>
+      <Logo src='/svg/HackUTD24.svg' />
       <Cursor src='/svg/cursor.svg' />
     </Button>
   )
