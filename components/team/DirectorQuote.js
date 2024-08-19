@@ -98,7 +98,7 @@ function DirectorQuote() {
         <br />
         <Citation>
           <Name>
-            <Hyphen>–</Hyphen>Purva Pawar &amp; Salman Jaher
+            <Hyphen>–</Hyphen>Salman Jaher &amp; Purva Pawar
           </Name>
           <Title>Co-Directors, HackUTD &apos;24</Title>
         </Citation>
@@ -108,4 +108,3 @@ function DirectorQuote() {
 }
 
 export default DirectorQuote;
-
