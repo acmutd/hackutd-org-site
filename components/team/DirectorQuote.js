@@ -90,9 +90,9 @@ function DirectorQuote() {
       </DirectorImage>
       <EncouragingText>
         <Message>
-          We're the directors of HackUTD this year and are very excited for the
-          next iteration of our event. Our team works hard all year round to
-          make our events possible, and we can't wait to put on one more
+          We&apos;re the directors of HackUTD this year and are very excited for
+          the next iteration of our event. Our team works hard all year round to
+          make our events possible, and we can&apos;t wait to put on one more
           successful hackathon!
         </Message>
         <br />
@@ -100,7 +100,7 @@ function DirectorQuote() {
           <Name>
             <Hyphen>–</Hyphen>Purva Pawar &amp; Salman Jaher
           </Name>
-          <Title>Co-Directors, HackUTD '24</Title>
+          <Title>Co-Directors, HackUTD &apos;24</Title>
         </Citation>
       </EncouragingText>
     </Wrapper>
