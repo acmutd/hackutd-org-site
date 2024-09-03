@@ -12,7 +12,7 @@ export default [
   { name: "Adelaide (Addy) Dunning", team: "Logistics" },
   { name: "Anwita Gudapurri", team: "Logistics" },
   { name: "Shreya Mekala", team: "Logistics" },
-  { name: "Roshni Reddhannan", team: "Logistics" },
+  { name: "Roshni Beddhannan", team: "Logistics" },
   { name: "Sahishnu Sagiraju", team: "Logistics" },
   { name: "Bhuvana Madiraju", team: "Industry" },
   { name: "Sharun Naicker", team: "Industry" },
