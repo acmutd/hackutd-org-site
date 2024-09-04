@@ -32,6 +32,7 @@ export default [
   { name: "Ann Jayan", team: "Marketing" },
   { name: "Sarah Jacob", team: "Marketing" },
   { name: "Caleb Bae", team: "Marketing" },
+  { name: "Jordan Tan", team: "Marketing" },
   { name: "Fatin Chad", team: "Finance" },
   { name: "Ayusha Timalsena", team: "Finance" },
 ];
