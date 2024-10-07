@@ -35,6 +35,7 @@ const PRHI = `${SVG_LOC}/PRHI.png`;
 const PNC = `${SVG_LOC}/PNC.png`;
 const benq = `${SVG_LOC}/benq.png`;
 const SNAP_AR = `${SVG_LOC}/SnapAR.png`;
+const SNAP_GHOST = `${SVG_LOC}/SnapGhost.png`;
 
 const SPONSORS = {
   // MARK: - Added for HackUTD IX Sponsors
@@ -46,6 +47,11 @@ const SPONSORS = {
   SNAP_AR: {
     name: "Snap AR",
     img: SNAP_AR,
+    link: "https://ar.snap.com/?lang=en-US",
+  },
+  SNAP_GHOST: {
+    name: "Snap Ghost",
+    img: SNAP_GHOST,
     link: "https://ar.snap.com/?lang=en-US",
   },
   BENQ: {
