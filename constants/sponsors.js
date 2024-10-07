@@ -34,6 +34,7 @@ const NordVPN = `${SVG_LOC}/NordVPN.png`;
 const PRHI = `${SVG_LOC}/PRHI.png`;
 const PNC = `${SVG_LOC}/PNC.png`;
 const benq = `${SVG_LOC}/benq.png`;
+const SNAP_AR = `${SVG_LOC}/SnapAR.png`;
 
 const SPONSORS = {
   // MARK: - Added for HackUTD IX Sponsors
@@ -41,6 +42,11 @@ const SPONSORS = {
     name: "PNC Bank",
     img: PNC,
     link: "https://www.pnc.com/",
+  },
+  SNAP_AR: {
+    name: "Snap AR",
+    img: SNAP_AR,
+    link: "https://ar.snap.com/?lang=en-US",
   },
   BENQ: {
     name: "BenQ",

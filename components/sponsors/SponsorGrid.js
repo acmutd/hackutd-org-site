@@ -129,10 +129,11 @@ export default function SponsorGrid() {
 
   return (
     <Container dark={dark}>
-      <Two>
+      <Three>
         <SponsorImg sponsor={SPONSORS.PNC} />
         <SponsorImg sponsor={SPONSORS.BENQ} />
-      </Two>
+        <SponsorImg sponsor={SPONSORS.SNAP_AR} />
+      </Three>
       <Three>
         <SponsorImg sponsor={SPONSORS.GOLDMAN_SACHS} />
         <SponsorImg sponsor={SPONSORS.TOYOTA} />
@@ -185,4 +186,3 @@ export default function SponsorGrid() {
     </Container>
   );
 }
-
