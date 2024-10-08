@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -7,15 +7,48 @@ import CONSTRAINTS from "constants/constraints";
 import ThemeContext from "context/ThemeContext";
 
 import shadow from "assets/img/half_shadow.png";
+import LogoContext from "context/LogoContext";
+import { useDelayUnmount } from "hooks/useDelayUnmount";
+
+const mountedStyle = { animation: "inAnimation 250ms ease-in" };
+const unmountedStyle = {
+  animation: "outAnimation 270ms ease-out",
+  animationFillMode: "forwards",
+};
 
 const Holder = styled.div`
   position: relative;
   width: 100%;
   max-width: 100%;
+
+  transition: transform 0.5s, opacity 0.3s;
+  transform-origin: bottom;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
 `;
 function SponsorImg({ sponsor }) {
+  const { currentHoveredLogo, setCurrentHoveredLogo } = useContext(LogoContext);
   return (
-    <Holder>
+    <Holder
+      onMouseOver={() => {
+        setCurrentHoveredLogo(sponsor.name);
+      }}
+      onMouseOut={() => {
+        setCurrentHoveredLogo("");
+      }}
+      style={{
+        opacity:
+          currentHoveredLogo !== "" && currentHoveredLogo !== sponsor.name
+            ? 0.3
+            : 1,
+      }}
+      onAnimationEnd={() => {
+        console.log("done");
+      }}
+    >
       <a href={sponsor.link} target="_blank" rel="noreferrer">
         <Image src={sponsor.img} layout="fill" objectFit="contain" />
       </a>
@@ -23,6 +56,46 @@ function SponsorImg({ sponsor }) {
   );
 }
 
+function SponsorDoubleImg({ sponsors }) {
+  const [currentSponsorIndex, setCurrentSponsorIndex] = useState(0);
+  const { currentHoveredLogo, setCurrentHoveredLogo } = useContext(LogoContext);
+  const shouldRenderChild = useDelayUnmount(currentSponsorIndex === 1, 100);
+  return (
+    <Holder
+      onMouseOver={() => {
+        setCurrentHoveredLogo(sponsors[1].name);
+        setCurrentSponsorIndex((prev) => prev ^ 1);
+      }}
+      onMouseOut={() => {
+        setCurrentHoveredLogo("");
+        setCurrentSponsorIndex((prev) => prev ^ 1);
+      }}
+      style={{
+        opacity:
+          currentHoveredLogo !== "" && currentHoveredLogo !== sponsors[1].name
+            ? 0.5
+            : 1,
+      }}
+    >
+      <a
+        href={sponsors[currentSponsorIndex].link}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {shouldRenderChild ? (
+          <Image
+            src={sponsors[1].img}
+            layout="fill"
+            objectFit="contain"
+            style={currentSponsorIndex === 1 ? mountedStyle : unmountedStyle}
+          />
+        ) : (
+          <Image src={sponsors[0].img} layout="fill" objectFit="contain" />
+        )}
+      </a>
+    </Holder>
+  );
+}
 const Container = styled.div`
   width: 100%;
   max-width: ${CONSTRAINTS.DEFAULT};
@@ -129,10 +202,11 @@ export default function SponsorGrid() {
 
   return (
     <Container dark={dark}>
-      <Two>
+      <Three>
         <SponsorImg sponsor={SPONSORS.PNC} />
         <SponsorImg sponsor={SPONSORS.BENQ} />
-      </Two>
+        <SponsorDoubleImg sponsors={[SPONSORS.SNAP_AR, SPONSORS.SNAP_GHOST]} />
+      </Three>
       <Three>
         <SponsorImg sponsor={SPONSORS.GOLDMAN_SACHS} />
         <SponsorImg sponsor={SPONSORS.TOYOTA} />
@@ -185,4 +259,3 @@ export default function SponsorGrid() {
     </Container>
   );
 }
-

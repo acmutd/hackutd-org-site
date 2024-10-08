@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
-import CONSTRAINTS from 'constants/constraints';
+import CONSTRAINTS from "constants/constraints";
 
 // defining styles that should apply across the entire website
 export default createGlobalStyle`
@@ -10,7 +10,9 @@ export default createGlobalStyle`
     --hackportal-text-gradient: radial-gradient(circle, rgba(187,131,255,1) 0%, rgba(123,129,255,1) 94%);
     --hackportal-color: #7B81FF;
 
-    ${props => props.dark ? `
+    ${(props) =>
+      props.dark
+        ? `
       --main-gradient: linear-gradient(191deg, rgba(89,15,183,1) 0%, rgba(180,0,201,1) 38%, rgba(212,112,15,1) 100%);
       --primary: white;
       --opposite: black;
@@ -25,7 +27,8 @@ export default createGlobalStyle`
       --hackathon-date: #999999;
       --hackathon-chooser-bg: #444444;
       --sheet-bg: #333333;
-    `:  `
+    `
+        : `
       --main-gradient: linear-gradient(180deg, #FFB524 3.05%, rgba(255, 0, 214, 0.45) 100%);
       --primary: black;
       --opposite: white;
@@ -84,4 +87,25 @@ export default createGlobalStyle`
       font-size: 16px;
     }
   }
-`
+  @keyframes inAnimation {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @keyframes outAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+`;
+
