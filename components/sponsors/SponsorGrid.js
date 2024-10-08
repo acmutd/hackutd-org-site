@@ -8,6 +8,13 @@ import ThemeContext from "context/ThemeContext";
 
 import shadow from "assets/img/half_shadow.png";
 import LogoContext from "context/LogoContext";
+import { useDelayUnmount } from "hooks/useDelayUnmount";
+
+const mountedStyle = { animation: "inAnimation 250ms ease-in" };
+const unmountedStyle = {
+  animation: "outAnimation 270ms ease-out",
+  animationFillMode: "forwards",
+};
 
 const Holder = styled.div`
   position: relative;
@@ -38,6 +45,9 @@ function SponsorImg({ sponsor }) {
             ? 0.3
             : 1,
       }}
+      onAnimationEnd={() => {
+        console.log("done");
+      }}
     >
       <a href={sponsor.link} target="_blank" rel="noreferrer">
         <Image src={sponsor.img} layout="fill" objectFit="contain" />
@@ -49,6 +59,7 @@ function SponsorImg({ sponsor }) {
 function SponsorDoubleImg({ sponsors }) {
   const [currentSponsorIndex, setCurrentSponsorIndex] = useState(0);
   const { currentHoveredLogo, setCurrentHoveredLogo } = useContext(LogoContext);
+  const shouldRenderChild = useDelayUnmount(currentSponsorIndex === 1, 100);
   return (
     <Holder
       onMouseOver={() => {
@@ -71,11 +82,16 @@ function SponsorDoubleImg({ sponsors }) {
         target="_blank"
         rel="noreferrer"
       >
-        <Image
-          src={sponsors[currentSponsorIndex].img}
-          layout="fill"
-          objectFit="contain"
-        />
+        {shouldRenderChild ? (
+          <Image
+            src={sponsors[1].img}
+            layout="fill"
+            objectFit="contain"
+            style={currentSponsorIndex === 1 ? mountedStyle : unmountedStyle}
+          />
+        ) : (
+          <Image src={sponsors[0].img} layout="fill" objectFit="contain" />
+        )}
       </a>
     </Holder>
   );
