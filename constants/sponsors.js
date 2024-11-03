@@ -36,6 +36,7 @@ const PNC = `${SVG_LOC}/PNC.png`;
 const benq = `${SVG_LOC}/benq.png`;
 const SNAP_AR = `${SVG_LOC}/SnapAR.png`;
 const SNAP_GHOST = `${SVG_LOC}/SnapGhost.png`;
+const INFOSYS = `${SVG_LOC}/Infosys.png`;
 
 const SPONSORS = {
   // MARK: - Added for HackUTD IX Sponsors
@@ -202,6 +203,11 @@ const SPONSORS = {
     name: "PRHI",
     img: PRHI,
     link: "http://patientsafetytech.com/",
+  },
+  INFOSYS: {
+    name: "Infosys",
+    img: INFOSYS,
+    link: "https://www.infosys.com/",
   },
 };
 
