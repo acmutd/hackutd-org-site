@@ -218,11 +218,12 @@ export default function SponsorGrid() {
         <SponsorImg sponsor={SPONSORS.CBRE} />
         <SponsorImg sponsor={SPONSORS.FRONTIER} />
       </Four>
-      <Three>
+      <Four>
         <SponsorImg sponsor={SPONSORS.FANNIE_MAE} />
         <SponsorImg sponsor={SPONSORS.JPMORGAN_CHASE} />
         <SponsorImg sponsor={SPONSORS.GEICO} />
-      </Three>
+        <SponsorImg sponsor={SPONSORS.INFOSYS} />
+      </Four>
       <Three>
         <SponsorImg sponsor={SPONSORS.PRHI} />
         <SponsorImg sponsor={SPONSORS.AXXESS} />
