@@ -207,11 +207,12 @@ export default function SponsorGrid() {
         <SponsorImg sponsor={SPONSORS.BENQ} />
         <SponsorDoubleImg sponsors={[SPONSORS.SNAP_AR, SPONSORS.SNAP_GHOST]} />
       </Three>
-      <Three>
+      <Four>
         <SponsorImg sponsor={SPONSORS.GOLDMAN_SACHS} />
         <SponsorImg sponsor={SPONSORS.TOYOTA} />
         <SponsorImg sponsor={SPONSORS.FIDELITY} />
-      </Three>
+        <SponsorImg sponsor={SPONSORS.PINATA} />
+      </Four>
       <Four>
         <SponsorImg sponsor={SPONSORS.STATEFARM} />
         <SponsorImg sponsor={SPONSORS.EOG} />
