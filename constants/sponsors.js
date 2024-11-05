@@ -37,6 +37,7 @@ const benq = `${SVG_LOC}/benq.png`;
 const SNAP_AR = `${SVG_LOC}/SnapAR.png`;
 const SNAP_GHOST = `${SVG_LOC}/SnapGhost.png`;
 const INFOSYS = `${SVG_LOC}/Infosys.png`;
+const PINATA = `${SVG_LOC}/pinata.png`;
 
 const SPONSORS = {
   // MARK: - Added for HackUTD IX Sponsors
@@ -44,6 +45,11 @@ const SPONSORS = {
     name: "PNC Bank",
     img: PNC,
     link: "https://www.pnc.com/",
+  },
+  PINATA: {
+    name: "Pinata",
+    img: PINATA,
+    link: "https://pinata.cloud/",
   },
   SNAP_AR: {
     name: "Snap AR",
