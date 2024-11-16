@@ -20,6 +20,7 @@ export default [
   { name: "Ridwan Amin", team: "Industry" },
   { name: "Bryan Caraman", team: "Industry" },
   { name: "John Luke", team: "Industry" },
+  { name: "Esmond Tsang", team: "Industry" },
   { name: "Mike Nguyen", team: "Tech" },
   { name: "Wei Seng", team: "Tech" },
   { name: "Rayyan Waris", team: "Tech" },
